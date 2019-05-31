@@ -8,6 +8,12 @@
         [           "background.js"        
         ],        
         "persistent": false    },
+<<<<<<< HEAD
+=======
+        "page_action": {
+            "default_popup": "popup.html"
+          }
+>>>>>>> 72150f2baf0b958d12888295cf22d0f0ac41ecbe
 
         "page_action": {        
             "default_popup": "popup.html",        
