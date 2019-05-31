@@ -49,7 +49,7 @@ namespace Memenger
 
         public void AddMemesFromFolder(string folderPath)
         {
-            DirectoryInfo d = new DirectoryInfo(folderPath);   //Assuming Test is your Folder
+            DirectoryInfo d = new DirectoryInfo(folderPath);    //Assuming Test is your Folder
             FileInfo[] Files = d.GetFiles("*.png");             //Getting .png files
 
             foreach (FileInfo file in Files)                    // Add every meme to Meme List
