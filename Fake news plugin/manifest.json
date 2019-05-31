@@ -5,10 +5,18 @@
     "manifest_version": 2,
     "background": {        
         "scripts": 
-        [           
-                         "background.js"        
+        [           "background.js"        
         ],        
-        "persistent": false    }
+        "persistent": false    },
 
-
+        "page_action": {        
+            "default_popup": "popup.html",        
+            "default_icon": 
+            {                      
+                "128": "lenny128.png"        
+            }    },    
+            "icons": 
+            {       
+                 "128": "lenny128.png"    
+                }
 }
