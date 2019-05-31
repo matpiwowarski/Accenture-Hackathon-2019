@@ -22,8 +22,12 @@ namespace Memenger
     {
         public MainWindow()
         {
-            //Memecryptor memecryptor = Memecryptor.Instance;
+            Memecryptor memecryptor = Memecryptor.Instance;
+            string memeFolderPath = "../source";
+           // memecryptor.AddMemesFromFolder(memeFolderPath);
+
             InitializeComponent();
         }
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,6 +45,18 @@ namespace Memenger
                 MemeList.Add(memes[i]);
             }
             sortMemes();
+        }
+
+        public void AddMemesFromFolder(string folderPath)
+        {
+            DirectoryInfo d = new DirectoryInfo(folderPath);   //Assuming Test is your Folder
+            FileInfo[] Files = d.GetFiles("*.png");             //Getting .png files
+
+            foreach (FileInfo file in Files)                    // Add every meme to Meme List
+            {
+                Meme meme = new Meme(file.Name);
+                AddMeme(meme);
+            }
         }
 
         public void sortMemes()
