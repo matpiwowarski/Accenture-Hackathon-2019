@@ -22,7 +22,7 @@ namespace Memenger
     {
         public MainWindow()
         {
-            Memecryptor memecryptor = Memecryptor.Instance;
+            //Memecryptor memecryptor = Memecryptor.Instance;
             InitializeComponent();
         }
     }
