@@ -19,8 +19,12 @@ namespace Server
         [OperationContract]
         string XD(int value);
 
+        byte[] GetByte(byte[] data);
+
+
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
+
 
         // TODO: dodaj tutaj operacje usługi
     }

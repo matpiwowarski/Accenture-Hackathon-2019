@@ -23,6 +23,12 @@ namespace Server
             return (value * 2).ToString();
         }
 
+
+        public byte[] GetByte(byte[] data)
+        {
+            return data;
+        }
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)
