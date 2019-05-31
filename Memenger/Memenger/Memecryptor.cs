@@ -44,7 +44,7 @@ namespace Memenger
             {
                 MemeList.Add(memes[i]);
             }
-            sortMemes();
+            SortMemes();
         }
 
         public void AddMemesFromFolder(string folderPath)
@@ -59,12 +59,12 @@ namespace Memenger
             }
         }
 
-        public void sortMemes()
+        public void SortMemes()
         {
             this.MemeList.Sort();
         }
 
-        public void findWordInMemes(string word)
+        public void FindWordInMemes(string word)
         {
             foreach (Meme m in memeList)
             {
