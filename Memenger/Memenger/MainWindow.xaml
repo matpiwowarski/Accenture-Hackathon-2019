@@ -1,12 +1,20 @@
-﻿<Window x:Class="Memenger.MainWindow"
+﻿<Window x:Name="Memenger_Window" x:Class="Memenger.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Memenger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="768" Width="1024">
+        Title="Memenger" Height="768" Width="1024" WindowStartupLocation="CenterScreen" Background="#19FFFFFF">
     <Grid>
-        
+        <Grid x:Name="Communication_Grid" HorizontalAlignment="Left" Width="853" Margin="163,0,0,0" Background="#E5FFFFFF">
+            <Label x:Name="ContactNameLabel" Content="contact name" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Margin="0,10,0,0"/>
+            <TextBox x:Name="TextBox" HorizontalAlignment="Center" Height="142" Margin="20,0,20,20" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="668" FontSize="24" Background="#19000000" Foreground="#E5000000"/>
+            <Label x:Name="Text_here_Label" Content="text here" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="22" Margin="0,0,0,160"/>
+
+        </Grid>
+        <Grid x:Name="User_Grid" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="158">
+            <Label x:Name="Username_Label" Content="username" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#E5FFFFFF" FontSize="24"/>
+        </Grid>
     </Grid>
 </Window>
