@@ -11,7 +11,7 @@
             <Label x:Name="ContactNameLabel" Content="contact name" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Margin="0,10,0,0"/>
             <TextBox x:Name="TextBox" HorizontalAlignment="Center" Height="142" Margin="0,0,100,20" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="668" FontSize="24" Background="#19000000" Foreground="#E5000000"/>
             <Label x:Name="Text_here_Label" Content="text here" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="22" Margin="0,0,100,160"/>
-            <Button x:Name="Send_Button" HorizontalAlignment="Right" Margin="0,0,40,40" VerticalAlignment="Bottom" Width="64" Height="64">
+            <Button x:Name="Send_Button" HorizontalAlignment="Right" Margin="0,0,40,40" VerticalAlignment="Bottom" Width="64" Height="64" Click="Send_Button_Click">
                 <Image x:Name="Logo_Image" Source="source/icons/logo.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
         </Grid>

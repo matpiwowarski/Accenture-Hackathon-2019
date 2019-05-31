@@ -28,6 +28,9 @@ namespace Memenger
 
             InitializeComponent();
         }
+        private void Send_Button_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }
