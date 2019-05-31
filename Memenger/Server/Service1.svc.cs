@@ -17,6 +17,12 @@ namespace Server
             return string.Format("You entered: {0}", value);
         }
 
+        public string XD(int value)
+        {
+
+            return (value * 2).ToString();
+        }
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)

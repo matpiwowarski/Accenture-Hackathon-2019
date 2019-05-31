@@ -12,7 +12,8 @@ namespace Client
             ServiceReference1.Service1Client proxy = new ServiceReference1.Service1Client();
             var msg = Console.ReadLine();
             var msg1 = proxy.GetData(int.Parse(msg));
-            Console.Write(msg1);
+            var msg2 = proxy.XD(int.Parse(msg));
+            Console.Write(msg2);
             Console.ReadKey();
         }
     }

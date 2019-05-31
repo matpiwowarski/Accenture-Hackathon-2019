@@ -81,6 +81,9 @@ namespace Client.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         string GetData(int value);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/XD", ReplyAction="http://tempuri.org/IService1/XDResponse")]
+        string XD(int value);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         Client.ServiceReference1.CompositeType GetDataUsingDataContract(Client.ServiceReference1.CompositeType composite);
     }
@@ -114,6 +117,10 @@ namespace Client.ServiceReference1 {
         
         public string GetData(int value) {
             return base.Channel.GetData(value);
+        }
+        
+        public string XD(int value) {
+            return base.Channel.XD(value);
         }
         
         public Client.ServiceReference1.CompositeType GetDataUsingDataContract(Client.ServiceReference1.CompositeType composite) {
