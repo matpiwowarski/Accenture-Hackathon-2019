@@ -30,6 +30,13 @@ namespace Memenger
         }
         private void Send_Button_Click(object sender, RoutedEventArgs e)
         {
+            if(TextBox.Text.Length > 0 )
+            {
+                Memecryptor memecryptor = Memecryptor.Instance;
+                memecryptor.Text = TextBox.Text.ToString();
+                TextBox.Text = "";
+            }
+
         }
 
 
