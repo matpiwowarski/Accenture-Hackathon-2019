@@ -1,5 +1,6 @@
 chrome.runtime.onInstalled.addListener(function() 
 {    
     // add an action here
-alert("XD");
+    console.log("konsolowa wiadomosc");
+    alert("UWAGA! TUTAJ JEST FAKENEWS!");
 });
