@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Memecryptor
+namespace Memenger
 {
-    class Meme
+   class Meme
     {
         private string fileName;
         public string FileName { get => fileName; set => fileName = value; }

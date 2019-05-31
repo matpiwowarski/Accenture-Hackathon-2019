@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memecryptor", "Memecryptor\Memecryptor.csproj", "{C629F0E6-07DE-412E-94CA-F6F21B99869C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memenger", "Memenger\Memenger.csproj", "{740CBFDF-37D4-4351-860D-1A7C1774F45F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C629F0E6-07DE-412E-94CA-F6F21B99869C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C629F0E6-07DE-412E-94CA-F6F21B99869C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C629F0E6-07DE-412E-94CA-F6F21B99869C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C629F0E6-07DE-412E-94CA-F6F21B99869C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{740CBFDF-37D4-4351-860D-1A7C1774F45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740CBFDF-37D4-4351-860D-1A7C1774F45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740CBFDF-37D4-4351-860D-1A7C1774F45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740CBFDF-37D4-4351-860D-1A7C1774F45F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AC5952F3-609C-4AE0-AF8B-27310AF3A494}
+		SolutionGuid = {71743880-2C95-45A2-A71F-26679A9A159D}
 	EndGlobalSection
 EndGlobal
