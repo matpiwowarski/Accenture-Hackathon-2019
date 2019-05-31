@@ -10,6 +10,8 @@ namespace Memecryptor
     {
         static void Main(string[] args)
         {
+            Memecryptor memecryptor = Memecryptor.Instance;
+
         }
     }
 }
