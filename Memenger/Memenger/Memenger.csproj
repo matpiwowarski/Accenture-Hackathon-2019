@@ -199,5 +199,11 @@
   <ItemGroup>
     <Resource Include="icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\icons\Contact1.png" />
+    <Resource Include="source\icons\Contact2.png" />
+    <Resource Include="source\icons\Contact3.png" />
+    <Resource Include="source\icons\Contact4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
