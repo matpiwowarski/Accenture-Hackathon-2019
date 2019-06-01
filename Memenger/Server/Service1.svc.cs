@@ -62,7 +62,8 @@ namespace Server
         public static string SendMessage(string text, string sender, string reciever)
         {
             int index = listOfClients.FindIndex(client => client.name == reciever);
-            if (index == -1) index = 0;
+
+            if (index == -1) return "no user found";
             listOfClients[index].Unread++;
             listOfClients[index].AllMessages.Add(new Message(text, sender, reciever));
 
