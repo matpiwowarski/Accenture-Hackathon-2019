@@ -123,5 +123,8 @@
   <ItemGroup>
     <Resource Include="source\the_future_is_now_old_man.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\impossible_perhaps_the_archives_are_incomplete.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
