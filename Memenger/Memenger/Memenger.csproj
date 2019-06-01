@@ -132,5 +132,8 @@
   <ItemGroup>
     <Resource Include="source\braki_pustka_404_impossible_perhaps_the_archives_are_incomplete.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\ah_shit_here_we_go_again.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
