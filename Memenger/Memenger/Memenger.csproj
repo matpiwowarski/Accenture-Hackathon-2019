@@ -97,7 +97,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="source\dopperganger.jpg" />
     <Resource Include="source\hackerman.png" />

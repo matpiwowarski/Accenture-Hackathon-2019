@@ -64,13 +64,13 @@ namespace Memenger
             this.MemeList.Sort();
         }
 
-        public void FindWordInMemes(string word)
+        public void FindStringInMemes(string word)
         {
-            foreach (Meme m in memeList)
+            for(int i = 0; i < memeList.Count; i++) 
             {
-                if (m.FileName == word)
+                if (memeList[i].FileName.Contains(word))
                 {
-                    MemeList.Add(m);
+                    MemesToDisplay.Add(MemeList[i]);
                 }
             }
         }
