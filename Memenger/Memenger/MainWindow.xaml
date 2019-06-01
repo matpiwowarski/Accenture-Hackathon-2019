@@ -8,9 +8,11 @@
         Title="Memenger" Height="768" Width="1024" WindowStartupLocation="CenterScreen" Background="#19FFFFFF">
     <Window.Resources>
         <ResourceDictionary>
+            <ImageSource x:Key="ah_shit_here_we_go_again.png">source/ah_shit_here_we_go_again.png
+            </ImageSource>
             <ImageSource x:Key="braki_pustka_404_impossible_perhaps_the_archives_are_incomplete.png">source/braki_pustka_404_impossible_perhaps_the_archives_are_incomplete.png
             </ImageSource>
-            <ImageSource x:Key="cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png">source/cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png
+            <ImageSource x:Key="cze, czesc, czolem, elo, graba, hej, hejka, serwus, siemanko, siemasz, sie masz, strzala, zdrowko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png">source/cze, czesc, czolem, elo, graba, hej, hejka, serwus, siemanko, siemasz, sie masz, strzala, zdrowko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png
             </ImageSource>
             <ImageSource x:Key="hackerman_haker_koder_programista_spec_technologia.png">source/hackerman_haker_koder_programista_spec_technologia.png
             </ImageSource>
