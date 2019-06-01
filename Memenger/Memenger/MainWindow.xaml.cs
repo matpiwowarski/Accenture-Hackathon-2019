@@ -107,29 +107,36 @@ namespace Memenger
             if (fileName != "")
             {
                 fileName = memecryptor.PutWordGetMeme(fileName);
-                if (UserImage1.Source == null && ContactImage1.Source == null)
-                {
-                    ContactImage1.Source = (ImageSource)FindResource(fileName);
-                }
-                else if (UserImage2.Source == null && ContactImage2.Source == null)
-                {
-                    ContactImage2.Source = (ImageSource)FindResource(fileName);
-                }
-                else if (UserImage3.Source == null && ContactImage3.Source == null)
-                {
-                    ContactImage3.Source = (ImageSource)FindResource(fileName);
-                }
-                else
-                {
-                    UserImage1.Source = UserImage2.Source;
-                    UserImage2.Source = UserImage3.Source;
+                try
+                { 
+                    if (UserImage1.Source == null && ContactImage1.Source == null)
+                    {
+                        ContactImage1.Source = (ImageSource)FindResource(fileName);
+                    }
+                    else if (UserImage2.Source == null && ContactImage2.Source == null)
+                    {
+                        ContactImage2.Source = (ImageSource)FindResource(fileName);
+                    }
+                    else if (UserImage3.Source == null && ContactImage3.Source == null)
+                    {
+                        ContactImage3.Source = (ImageSource)FindResource(fileName);
+                    }
+                    else
+                    {
+                        UserImage1.Source = UserImage2.Source;
+                        UserImage2.Source = UserImage3.Source;
 
-                    ContactImage1.Source = ContactImage2.Source;
-                    ContactImage2.Source = ContactImage3.Source;
-                    ContactImage3.Source = (ImageSource)FindResource(fileName);
+                        ContactImage1.Source = ContactImage2.Source;
+                        ContactImage2.Source = ContactImage3.Source;
+                        ContactImage3.Source = (ImageSource)FindResource(fileName);
+                    }
                 }
+                catch(Exception)
+                {
+
+                }
+                fileName = "";
             }
-            fileName = "";
         }
 
         private void ContactNameLabel_TextChanged(object sender, TextChangedEventArgs e)
