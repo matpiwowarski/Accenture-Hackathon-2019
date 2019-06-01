@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Timers;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Memenger
 {
@@ -20,10 +23,16 @@ namespace Memenger
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static DispatcherTimer _timer = new DispatcherTimer();
         ServiceReference1.Service1Client proxy;
+        public static DispatcherTimer Timer { get => _timer; set => _timer = value; }
 
         public MainWindow()
         {
+            Timer.Tick += new EventHandler(update);
+            Timer.Interval = new TimeSpan(0, 0, 1);
+            Timer.Start();
+
             Memecryptor memecryptor = Memecryptor.Instance;
             User user = User.Instance;
             Contact contact = Contact.Instance;
@@ -36,26 +45,33 @@ namespace Memenger
 
         private void SendMeme(string resourceName)
         {
-            if (UserImage1.Source == null && ContactImage1.Source == null)
+            try
             {
-                UserImage1.Source = (ImageSource)FindResource(resourceName);
-            }
-            else if(UserImage2.Source == null && ContactImage2.Source == null)
-            {
-                UserImage2.Source = (ImageSource)FindResource(resourceName);
-            }
-            else if (UserImage3.Source == null && ContactImage3.Source == null)
-            {
-                UserImage3.Source = (ImageSource)FindResource(resourceName);
-            }
-            else
-            {
-                ContactImage1.Source = ContactImage2.Source;
-                ContactImage2.Source = ContactImage3.Source;
+                if (UserImage1.Source == null && ContactImage1.Source == null)
+                {
+                    UserImage1.Source = (ImageSource)FindResource(resourceName);
+                }
+                else if (UserImage2.Source == null && ContactImage2.Source == null)
+                {
+                    UserImage2.Source = (ImageSource)FindResource(resourceName);
+                }
+                else if (UserImage3.Source == null && ContactImage3.Source == null)
+                {
+                    UserImage3.Source = (ImageSource)FindResource(resourceName);
+                }
+                else
+                {
+                    //ContactImage1.Source = ContactImage2.Source;
+                    //ContactImage2.Source = ContactImage3.Source;
 
-                UserImage1.Source = UserImage2.Source;
-                UserImage2.Source = UserImage3.Source;
-                UserImage3.Source = (ImageSource)FindResource(resourceName);
+                    UserImage1.Source = UserImage2.Source;
+                    UserImage2.Source = UserImage3.Source;
+                    UserImage3.Source = (ImageSource)FindResource(resourceName);
+                }
+            }
+            catch (Exception)
+            {
+                
             }
         }
         private void Send_Button_Click(object sender, RoutedEventArgs e)
@@ -80,6 +96,48 @@ namespace Memenger
             }
         }
 
+        void update(object sender, EventArgs e)
+        {
+            string fileName = proxy.GetMessage(Username_Label.Text.ToString());
+
+            Memecryptor memecryptor = Memecryptor.Instance;
+
+            //fileName = memecryptor.PutWordGetMeme(fileName);
+            //string fileName = "";
+            if (fileName != "")
+            {
+                fileName = memecryptor.PutWordGetMeme(fileName);
+                try
+                { 
+                    if (UserImage1.Source == null && ContactImage1.Source == null)
+                    {
+                        ContactImage1.Source = (ImageSource)FindResource(fileName);
+                    }
+                    else if (UserImage2.Source == null && ContactImage2.Source == null)
+                    {
+                        ContactImage2.Source = (ImageSource)FindResource(fileName);
+                    }
+                    else if (UserImage3.Source == null && ContactImage3.Source == null)
+                    {
+                        ContactImage3.Source = (ImageSource)FindResource(fileName);
+                    }
+                    else
+                    {
+                        UserImage1.Source = UserImage2.Source;
+                        UserImage2.Source = UserImage3.Source;
+
+                        ContactImage1.Source = ContactImage2.Source;
+                        ContactImage2.Source = ContactImage3.Source;
+                        ContactImage3.Source = (ImageSource)FindResource(fileName);
+                    }
+                }
+                catch(Exception)
+                {
+
+                }
+                fileName = "";
+            }
+        }
 
         private void ContactNameLabel_TextChanged(object sender, TextChangedEventArgs e)
         {

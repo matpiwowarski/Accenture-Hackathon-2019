@@ -28,10 +28,10 @@ namespace Memenger.ServiceReference1 {
         System.Threading.Tasks.Task<int> CheckLoggedPeopleAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendMessage", ReplyAction="http://tempuri.org/IService1/SendMessageResponse")]
-        void SendMessage(string text, string sender, string reciever);
+        string SendMessage(string text, string sender, string reciever);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendMessage", ReplyAction="http://tempuri.org/IService1/SendMessageResponse")]
-        System.Threading.Tasks.Task SendMessageAsync(string text, string sender, string reciever);
+        System.Threading.Tasks.Task<string> SendMessageAsync(string text, string sender, string reciever);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMessage", ReplyAction="http://tempuri.org/IService1/GetMessageResponse")]
         string GetMessage(string name);
@@ -83,11 +83,11 @@ namespace Memenger.ServiceReference1 {
             return base.Channel.CheckLoggedPeopleAsync();
         }
         
-        public void SendMessage(string text, string sender, string reciever) {
-            base.Channel.SendMessage(text, sender, reciever);
+        public string SendMessage(string text, string sender, string reciever) {
+            return base.Channel.SendMessage(text, sender, reciever);
         }
         
-        public System.Threading.Tasks.Task SendMessageAsync(string text, string sender, string reciever) {
+        public System.Threading.Tasks.Task<string> SendMessageAsync(string text, string sender, string reciever) {
             return base.Channel.SendMessageAsync(text, sender, reciever);
         }
         

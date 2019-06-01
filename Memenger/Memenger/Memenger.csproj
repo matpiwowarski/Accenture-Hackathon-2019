@@ -152,6 +152,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="source\cze, czesc, czolem, elo, graba, hej, hejka, serwus, siemanko, siemasz, sie masz, strzala, zdrowko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png" />
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>
   <ItemGroup>
@@ -168,9 +171,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="source\cze, czesc, czolem, elo, graba, hej, hejka, serwus, siemanko, siemasz, sie masz, strzala, zdrowko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
