@@ -66,7 +66,6 @@ namespace Memenger
                 }
             }
         }
-
         public string PutWordGetMeme(string word)
         {
             MemesToDisplay.Clear();

@@ -23,6 +23,9 @@ namespace Memenger
         public MainWindow()
         {
             Memecryptor memecryptor = Memecryptor.Instance;
+            User user = User.Instance;
+            Contact contact = Contact.Instance;
+
             string memeFolderPath = "../../source/";
             memecryptor.AddMemesFromFolder(memeFolderPath);
 
@@ -71,12 +74,23 @@ namespace Memenger
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
-            
         }
 
         private void Send_Button_AccessKeyPressed(object sender, AccessKeyPressedEventArgs e)
         {
 
+        }
+
+        private void ContactNameLabel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Contact contact = Contact.Instance;
+            contact.Name = ContactNameLabel.Text.ToString();
+        }
+
+        private void Username_Label_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            User user = User.Instance;
+            user.Name = Username_Label.Text.ToString();
         }
     }
 }
