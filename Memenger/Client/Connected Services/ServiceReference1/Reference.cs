@@ -78,6 +78,12 @@ namespace Client.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
+        void Login(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CheckLoggedPeople", ReplyAction="http://tempuri.org/IService1/CheckLoggedPeopleResponse")]
+        string CheckLoggedPeople();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         string GetData(int value);
         
@@ -113,6 +119,14 @@ namespace Client.ServiceReference1 {
         
         public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public void Login(string name) {
+            base.Channel.Login(name);
+        }
+        
+        public string CheckLoggedPeople() {
+            return base.Channel.CheckLoggedPeople();
         }
         
         public string GetData(int value) {

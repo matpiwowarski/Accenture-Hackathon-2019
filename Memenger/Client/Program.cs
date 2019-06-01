@@ -9,11 +9,15 @@ namespace Client
     {
         static void Main(string[] args)
         {
-            ServiceReference1.Service1Client proxy = new ServiceReference1.Service1Client();
-            var msg = Console.ReadLine();
-            var msg1 = proxy.GetData(int.Parse(msg));
-            var msg2 = proxy.XD(int.Parse(msg));
-            Console.Write(msg2);
+            while (true)
+            {
+                ServiceReference1.Service1Client proxy = new ServiceReference1.Service1Client();
+                var login = Console.ReadLine();
+                //var msg1 = proxy.GetData(int.Parse(msg));
+                proxy.Login(login);
+                Console.WriteLine(proxy.CheckLoggedPeople());
+            }
+
             Console.ReadKey();
         }
     }

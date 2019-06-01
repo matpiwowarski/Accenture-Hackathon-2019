@@ -12,12 +12,16 @@ namespace Server
     [ServiceContract]
     public interface IService1
     {
+        [OperationContract]
+        void Login(string name);
+
+        [OperationContract]
+        string CheckLoggedPeople();
 
         [OperationContract]
         string GetData(int value);
 
         [OperationContract]
-        [WebGet]
         string XD(int value);
 
         byte[] GetByte(byte[] data);
