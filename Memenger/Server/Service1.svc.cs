@@ -8,6 +8,24 @@ using System.Text;
 
 namespace Server
 {
+
+    class Client
+    {
+        public string name;
+        //public List<messages>;
+
+    }
+
+    static class AllClients
+    {
+        public static int loggedIn = 0;
+        public static List<Client> listOfClients;
+
+
+    }
+
+
+
     static class PrzechowywaneDane
     {
         public static int iloscZalogOsob = 0;
@@ -36,6 +54,10 @@ namespace Server
     // UWAGA: aby uruchomić klienta testowego WCF w celu przetestowania tej usługi, wybierz plik Service1.svc lub Service1.svc.cs w eksploratorze rozwiązań i rozpocznij debugowanie.
     public class Service1 : IService1
     {
+
+
+
+
         public void Login(string name)
         {
             PrzechowywaneDane.Login(name);
