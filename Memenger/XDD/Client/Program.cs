@@ -7,10 +7,10 @@ using System.Text;
 
 namespace Client
 {
-    }
 
- 
-      
+
+
+
     // Client app is the one sending messages to a Server/listener.   
     // Both listener and client can send messages back and forth once a   
     // communication is established.  
@@ -33,7 +33,7 @@ namespace Client
                 // Get Host IP Address that is used to establish a connection  
                 // In this case, we get one IP address of localhost that is IP : 127.0.0.1  
                 // If a host has multiple addresses, you will get a list of addresses  
-                IPHostEntry host = Dns.GetHostEntry("localhost");
+                IPHostEntry host = Dns.GetHostEntry("192.168.43.96");
                 IPAddress ipAddress = host.AddressList[0];
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, 11000);
 
@@ -50,10 +50,10 @@ namespace Client
                     Console.WriteLine("Socket connected to {0}",
                         sender.RemoteEndPoint.ToString());
 
-                // Encode the data string into a byte array.    
+                    // Encode the data string into a byte array.    
                     var message = Console.ReadLine();
 
-                    byte[] msg = Encoding.ASCII.GetBytes(message+"<EOF>");
+                    byte[] msg = Encoding.ASCII.GetBytes(message + "<EOF>");
 
                     // Send the data through the socket.    
                     int bytesSent = sender.Send(msg);
@@ -66,7 +66,7 @@ namespace Client
                     // Release the socket.    
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
-                Console.ReadKey();
+                    Console.ReadKey();
 
                 }
                 catch (ArgumentNullException ane)
@@ -90,4 +90,4 @@ namespace Client
         }
     }
 
-
+}
