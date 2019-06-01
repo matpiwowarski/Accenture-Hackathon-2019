@@ -140,9 +140,6 @@
     <Resource Include="source\z.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="source\reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="source\braki_pustka_404_impossible_perhaps_the_archives_are_incomplete.png" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +168,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
