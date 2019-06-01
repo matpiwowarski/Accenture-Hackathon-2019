@@ -50,25 +50,35 @@ namespace Memenger
                 if (UserImage1.Source == null && ContactImage1.Source == null)
                 {
                     UserImage1.Source = (ImageSource)FindResource(resourceName);
+                    ///UserDate1.Content = STRING; 
                 }
                 else if (UserImage2.Source == null && ContactImage2.Source == null)
                 {
                     UserImage2.Source = (ImageSource)FindResource(resourceName);
+                    ///UserDate2.Content = STRING; 
                 }
                 else if (UserImage3.Source == null && ContactImage3.Source == null)
                 {
                     UserImage3.Source = (ImageSource)FindResource(resourceName);
+                    ///UserDate3.Content = STRING; 
                 }
                 else
                 {
                     ContactImage1.Source = ContactImage2.Source;
+                    ContactDate1.Content = ContactDate2.Content;
                     ContactImage2.Source = ContactImage3.Source;
+                    ContactDate2.Content = ContactDate3.Content;
                     if (ContactImage3 != null)
                         ContactImage3.Source = null;
+                    if (ContactDate3 != null)
+                        ContactDate3.Content = null; 
 
                     UserImage1.Source = UserImage2.Source;
+                    UserDate1.Content = UserDate2.Content;
                     UserImage2.Source = UserImage3.Source;
+                    UserDate2.Content = UserDate3.Content;
                     UserImage3.Source = (ImageSource)FindResource(resourceName);
+                    ///UserDate3.Content = STRING;
                 }
             }
             catch (Exception)
@@ -117,26 +127,35 @@ namespace Memenger
                     if (UserImage1.Source == null && ContactImage1.Source == null)
                     {
                         ContactImage1.Source = (ImageSource)FindResource(fileName);
+                        ///ContactDate1.Content = STRING; 
                     }
                     else if (UserImage2.Source == null && ContactImage2.Source == null)
                     {
                         ContactImage2.Source = (ImageSource)FindResource(fileName);
+                        ///ContactDate2.Content = STRING; 
                     }
                     else if (UserImage3.Source == null && ContactImage3.Source == null)
                     {
                         ContactImage3.Source = (ImageSource)FindResource(fileName);
+                        ///ContactDate3.Content = STRING; 
                     }
                     else
                     {
                         UserImage1.Source = UserImage2.Source;
+                        UserDate1.Content = UserDate2.Content; 
                         UserImage2.Source = UserImage3.Source;
+                        UserDate2.Content = UserDate3.Content; 
                         if (UserImage3 != null)
-                            UserImage3.Source = null; 
-
+                            UserImage3.Source = null;
+                        if (UserDate3 != null)
+                            UserDate3.Content = null;
 
                         ContactImage1.Source = ContactImage2.Source;
+                        ContactDate1.Content = ContactDate2.Content;
                         ContactImage2.Source = ContactImage3.Source;
+                        ContactDate2.Content = ContactDate3.Content;
                         ContactImage3.Source = (ImageSource)FindResource(fileName);
+                        ///ContactDate3.Content = STRING; 
                     }
                 }
                 catch(Exception)
