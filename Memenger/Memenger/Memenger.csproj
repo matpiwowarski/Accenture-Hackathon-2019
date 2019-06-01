@@ -143,10 +143,10 @@
     <Resource Include="source\reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="source\cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png" />
+    <Resource Include="source\braki_pustka_404_impossible_perhaps_the_archives_are_incomplete.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="source\braki_pustka_404_impossible_perhaps_the_archives_are_incomplete.png" />
+    <Resource Include="source\ah_shit_here_we_go_again.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -168,6 +168,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\cze, czesc, czolem, elo, graba, hej, hejka, serwus, siemanko, siemasz, sie masz, strzala, zdrowko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
