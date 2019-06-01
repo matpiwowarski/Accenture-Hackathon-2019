@@ -47,20 +47,29 @@ namespace Memenger
         {
             try
             {
+                string oneNumberHour = "";
+                if (DateTime.Now.Hour.ToString().Count() < 2)
+                    oneNumberHour = "0";
+
+                string oneNumberMinute = "";
+                if (DateTime.Now.Minute.ToString().Count() < 2)
+                    oneNumberMinute = "0";
+                string time = oneNumberHour + DateTime.Now.Hour.ToString() + ":" + oneNumberMinute + DateTime.Now.Minute.ToString();
+
                 if (UserImage1.Source == null && ContactImage1.Source == null)
                 {
                     UserImage1.Source = (ImageSource)FindResource(resourceName);
-                    ///UserDate1.Content = STRING; 
+                    UserDate1.Content = time; 
                 }
                 else if (UserImage2.Source == null && ContactImage2.Source == null)
                 {
                     UserImage2.Source = (ImageSource)FindResource(resourceName);
-                    ///UserDate2.Content = STRING; 
+                    UserDate2.Content = time; 
                 }
                 else if (UserImage3.Source == null && ContactImage3.Source == null)
                 {
                     UserImage3.Source = (ImageSource)FindResource(resourceName);
-                    ///UserDate3.Content = STRING; 
+                    UserDate3.Content = time; 
                 }
                 else
                 {
@@ -78,7 +87,7 @@ namespace Memenger
                     UserImage2.Source = UserImage3.Source;
                     UserDate2.Content = UserDate3.Content;
                     UserImage3.Source = (ImageSource)FindResource(resourceName);
-                    ///UserDate3.Content = STRING;
+                    UserDate3.Content = time;
                 }
             }
             catch (Exception)
@@ -115,6 +124,15 @@ namespace Memenger
             string fileName = proxy.GetMessage(Username_Label.Text.ToString());
 
             Memecryptor memecryptor = Memecryptor.Instance;
+            string oneNumberHour = "";
+            if (DateTime.Now.Hour.ToString().Count() < 2)
+                oneNumberHour = "0";
+
+            string oneNumberMinute = "";
+            if (DateTime.Now.Minute.ToString().Count() < 2)
+                oneNumberMinute = "0";
+
+            string time = oneNumberHour + DateTime.Now.Hour.ToString() + ":" + oneNumberMinute  + DateTime.Now.Minute.ToString();
 
             //fileName = memecryptor.PutWordGetMeme(fileName);
 
@@ -127,17 +145,17 @@ namespace Memenger
                     if (UserImage1.Source == null && ContactImage1.Source == null)
                     {
                         ContactImage1.Source = (ImageSource)FindResource(fileName);
-                        ///ContactDate1.Content = STRING; 
+                        ContactDate1.Content = time; 
                     }
                     else if (UserImage2.Source == null && ContactImage2.Source == null)
                     {
                         ContactImage2.Source = (ImageSource)FindResource(fileName);
-                        ///ContactDate2.Content = STRING; 
+                        ContactDate2.Content = time; 
                     }
                     else if (UserImage3.Source == null && ContactImage3.Source == null)
                     {
                         ContactImage3.Source = (ImageSource)FindResource(fileName);
-                        ///ContactDate3.Content = STRING; 
+                        ContactDate3.Content = time; 
                     }
                     else
                     {
@@ -155,7 +173,7 @@ namespace Memenger
                         ContactImage2.Source = ContactImage3.Source;
                         ContactDate2.Content = ContactDate3.Content;
                         ContactImage3.Source = (ImageSource)FindResource(fileName);
-                        ///ContactDate3.Content = STRING; 
+                        ContactDate3.Content = time; 
                     }
                 }
                 catch(Exception)

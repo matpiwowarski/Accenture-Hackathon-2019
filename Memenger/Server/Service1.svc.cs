@@ -113,43 +113,6 @@ namespace Server
 
             }
         }
-
-        public static string GetMessage(string name)        //patrz wywolanie na samym dole
-        {
-            int index = listOfClients.FindIndex(client => client.name == name);
-            Memecryptor memecryptor = Memecryptor.Instance;
-            try
-            {
-                if (listOfClients[index].Unread == 0) return "";
-                listOfClients[index].Unread--;
-                return memecryptor.PutWordGetMeme(listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text);
-            }
-            catch
-            {
-
-                return "";
-
-            }
-        }
-        public static string GetMessageByte(string name)
-        {
-            int index = listOfClients.FindIndex(client => client.name == name);
-            Memecryptor memecryptor = Memecryptor.Instance;
-
-            try
-            {
-
-                return memecryptor.PutWordGetMeme(listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text);
-               
-            }
-            catch
-            {
-
-                return "brak wjadomosci";
-
-            }
-        }
-
     }
 
 
