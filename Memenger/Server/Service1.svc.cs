@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using Memenger;
 
 namespace Server
 {
@@ -46,22 +47,49 @@ namespace Server
         public static List<Client> listOfClients = new List<Client>();
 
 
+
         public static void LogIn(string name)
         {
-            listOfClients.Add(new Client(name));
-            loggedIn++;
+            if (listOfClients.FindIndex(client => client.name == name) == -1)
+            {
+                listOfClients.Add(new Client(name));
+                loggedIn++;
+
+            }
+
         }
 
-        public static void SendMessage(string text, string sender, string reciever)
+        public static string SendMessage(string text, string sender, string reciever)
         {
-            listOfClients.Find(client => client.name == reciever).AllMessages.Add(new Message(text, sender, reciever));
-
+            int index = listOfClients.FindIndex(client => client.name == reciever);
+            if (index == -1)
+            {
+                listOfClients[0].AllMessages.Add(new Message(text, sender, sender));
+            }
+            else listOfClients[index].AllMessages.Add(new Message(text, sender, reciever));
+            return text;
 
         }
 
         public static string GetMessage(string name)
         {
             int index = listOfClients.FindIndex(client => client.name == name);
+
+            try
+            {
+                return listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text;
+            }
+            catch
+            {
+
+                return "brak wjadomosci";
+
+            }
+        }
+        public static string GetMessageByte(string name)
+        {
+            int index = listOfClients.FindIndex(client => client.name == name);
+            Memecryptor memecryptor = Memecryptor.Instance;
 
             try
             {
@@ -101,7 +129,7 @@ namespace Server
 
         public string GetMessage(string name)
         {
-           return  AllClients.GetMessage(name);
+            return AllClients.GetMessage(name);
         }
     }
 }
