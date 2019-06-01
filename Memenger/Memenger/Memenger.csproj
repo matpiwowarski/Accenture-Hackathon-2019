@@ -140,9 +140,6 @@
     <Resource Include="source\z.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="source\reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="source\braki_pustka_404_impossible_perhaps_the_archives_are_incomplete.png" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +168,30 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\ale_dzban_dzbanometr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\change_my_mind_agrue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\e_farquad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\excuse_me_what_the_fuck_wtf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\it_aint_much_but_its_honets_work.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\o_suprised_pikachu_pokemon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\all_right_then_keep_your_secrets_hobbit_frodo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

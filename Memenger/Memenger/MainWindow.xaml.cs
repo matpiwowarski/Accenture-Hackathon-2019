@@ -79,6 +79,7 @@ namespace Memenger
             if(TextBox.Text.Length > 0 )
             {
                 string sentText = TextBox.Text.ToString();
+                sentText=sentText.Replace(' ', '_');
                 TextBox.Text = "";
 
                 Memecryptor memecryptor = Memecryptor.Instance;
