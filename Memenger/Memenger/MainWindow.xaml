@@ -8,11 +8,49 @@
         Title="Memenger" Height="768" Width="1024" WindowStartupLocation="CenterScreen" Background="#19FFFFFF">
     <Window.Resources>
         <ResourceDictionary>
-            <ImageSource x:Key="dopperganger.png">source/dopperganger.png
+            <ImageSource x:Key="braki_pustka_404.png">source/braki_pustka_404.png
             </ImageSource>
-            <ImageSource x:Key="hello_there.png">../../source/hello_there.png
+            <ImageSource x:Key="cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png">source/cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png
             </ImageSource>
-            <ImageSource x:Key="how_do_you_do_fellow_kids.png">source/how_do_you_do_fellow_kids.png
+            <ImageSource x:Key="hackerman_haker_koder_programista_spec_technologia.png">source/hackerman_haker_koder_programista_spec_technologia.png
+            </ImageSource>
+            <ImageSource x:Key="how_do_you_do_fellow_kids_relatable.png">source/how_do_you_do_fellow_kids_relatable.png
+            </ImageSource>
+            <ImageSource x:Key="improve_adapt_overcome_samodoskonalenie_przetrwanie_improwizacja_adaptacja_pokonanie.png">source/improve_adapt_overcome_samodoskonalenie_przetrwanie_improwizacja_adaptacja_pokonanie.png
+            </ImageSource>
+            <ImageSource x:Key="modern_problem_require_modern_solution_wspolczesne_problemy_rozwiazania.png">source/modern_problem_require_modern_solution_wspolczesne_problemy_rozwiazania.png
+            </ImageSource>
+            <ImageSource x:Key="no_i_dont_think_i_will_nie_sadze.png">source/no_i_dont_think_i_will_nie_sadze.png
+            </ImageSource>
+            <ImageSource x:Key="now_looks_like_a_job_for_me_robota_dla_mnie_praca.png">source/now_looks_like_a_job_for_me_robota_dla_mnie_praca.png
+            </ImageSource>
+            <ImageSource x:Key="old_lady_reads_starzy_babcia_dziadek.png">source/old_lady_reads_starzy_babcia_dziadek.png
+            </ImageSource>
+            <ImageSource x:Key="one_does_not_simply_trudne_jedno_nie_proste.png">source/one_does_not_simply_trudne_jedno_nie_proste.png
+            </ImageSource>
+            <ImageSource x:Key="outstanding_movedobre_zaskakujace_rozwiazanie_geniealne.png">source/outstanding_movedobre_zaskakujace_rozwiazanie_geniealne.png
+            </ImageSource>
+            <ImageSource x:Key="reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.png">source/reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.png
+            </ImageSource>
+            <ImageSource x:Key="roll_safe_sprytne.png">source/roll_safe_sprytne.png
+            </ImageSource>
+            <ImageSource x:Key="same_podobne_podobizna_spiderman.png">source/same_podobne_podobizna_spiderman.png
+            </ImageSource>
+            <ImageSource x:Key="the_future_is_now_old_man_przyszlosc_jest_teraz_stary_mezczyzno.png">source/the_future_is_now_old_man_przyszlosc_jest_teraz_stary_mezczyzno.png
+            </ImageSource>
+            <ImageSource x:Key="well_of_course_i_know_him_hes_me_oczywiscie_ze_go_znam_to_ja.png">source/well_of_course_i_know_him_hes_me_oczywiscie_ze_go_znam_to_ja.png
+            </ImageSource>
+            <ImageSource x:Key="well_yes_but_actually_no_tak_ale_nie.png">source/well_yes_but_actually_no_tak_ale_nie.png
+            </ImageSource>
+            <ImageSource x:Key="worldwide_swiatowy.png">source/worldwide_swiatowy.png
+            </ImageSource>
+            <ImageSource x:Key="you_are_already_dead_ty_jestes_martwy.png">source/you_are_already_dead_ty_jestes_martwy.png
+            </ImageSource>
+            <ImageSource x:Key="you_are_tearing_me_apart_the_room.png">source/you_are_tearing_me_apart_the_room.png
+            </ImageSource>
+            <ImageSource x:Key="you_have_become_the_very_thing_you_swore_to_destroy_jestes_tym_co_miales_zniszczyc.png">source/you_have_become_the_very_thing_you_swore_to_destroy_jestes_tym_co_miales_zniszczyc.png
+            </ImageSource>
+            <ImageSource x:Key="z.png">source/z.png
             </ImageSource>
         </ResourceDictionary>
     </Window.Resources>

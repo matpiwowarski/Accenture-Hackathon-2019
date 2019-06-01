@@ -28,6 +28,31 @@ namespace Memenger
 
             InitializeComponent();
         }
+
+        private void SendMeme(string resourceName)
+        {
+            if (UserImage1.Source == null && ContactImage1.Source == null)
+            {
+                UserImage1.Source = (ImageSource)FindResource(resourceName);
+            }
+            else if(UserImage2.Source == null && ContactImage2.Source == null)
+            {
+                UserImage2.Source = (ImageSource)FindResource(resourceName);
+            }
+            else if (UserImage3.Source == null && ContactImage3.Source == null)
+            {
+                UserImage3.Source = (ImageSource)FindResource(resourceName);
+            }
+            else
+            {
+                ContactImage1.Source = ContactImage2.Source;
+                ContactImage2.Source = ContactImage3.Source;
+
+                UserImage1.Source = UserImage2.Source;
+                UserImage2.Source = UserImage3.Source;
+                UserImage3.Source = (ImageSource)FindResource(resourceName);
+            }
+        }
         private void Send_Button_Click(object sender, RoutedEventArgs e)
         {
             if(TextBox.Text.Length > 0 )
@@ -36,20 +61,12 @@ namespace Memenger
                 TextBox.Text = "";
 
                 Memecryptor memecryptor = Memecryptor.Instance;
-                memecryptor.Text = sentText;
-                memecryptor.FindStringInMemes(sentText);
 
-                if(memecryptor.MemesToDisplay.Count > 0)
-                {
-                    string resourceName = memecryptor.MemesToDisplay[0].FileName.ToString();
-                    
-                    UserImage1.Source = (ImageSource)FindResource(resourceName);
-                }
-                memecryptor.MemesToDisplay.Clear();
+                string resourceName = memecryptor.PutWordGetMeme(sentText);
+
+                SendMeme(resourceName);
             }
         }
-
-        
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {

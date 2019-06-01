@@ -98,29 +98,35 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="source\dopperganger.png" />
-    <Resource Include="source\hello_there.png" />
-    <Resource Include="source\how_do_you_do_fellow_kids.png" />
-    <Resource Include="source\improve_adapt_overcome.png" />
-    <Resource Include="source\is_it_possible_to_learn_this_power.png" />
-    <Resource Include="source\modern_problem_require_modern_solution.png" />
-    <Resource Include="source\now_looks_like_a_job_for_me.png" />
-    <Resource Include="source\no_i_dont_think_i_will.png" />
-    <Resource Include="source\old_lady_reads.png" />
-    <Resource Include="source\one_does_not_simply.png" />
-    <Resource Include="source\outstanding-move_o_7264235.png" />
-    <Resource Include="source\outstanding_move.png" />
-    <Resource Include="source\roll_safe.png" />
-    <Resource Include="source\the_future_is_now_old_man.jpg" />
-    <Resource Include="source\well_of_course_i_know_him_hes_me.png" />
-    <Resource Include="source\well_yes_but_actually_no.png" />
-    <Resource Include="source\worldwide.png" />
-    <Resource Include="source\you_are_already_dead.png" />
-    <Resource Include="source\you_have_become_the_very_thing_you_swore_to_destroy.png" />
-    <Resource Include="source\yuo_are_tearing_me_apart.png" />
+    <Resource Include="source\icons\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="source\icons\logo.png" />
+    <Resource Include="source\braki_pustka_404.png" />
+    <Resource Include="source\hackerman_haker_koder_programista_spec_technologia.png" />
+    <Resource Include="source\how_do_you_do_fellow_kids_relatable.png" />
+    <Resource Include="source\improve_adapt_overcome_samodoskonalenie_przetrwanie_improwizacja_adaptacja_pokonanie.png" />
+    <Resource Include="source\modern_problem_require_modern_solution_wspolczesne_problemy_rozwiazania.png" />
+    <Resource Include="source\now_looks_like_a_job_for_me_robota_dla_mnie_praca.png" />
+    <Resource Include="source\no_i_dont_think_i_will_nie_sadze.png" />
+    <Resource Include="source\old_lady_reads_starzy_babcia_dziadek.png" />
+    <Resource Include="source\one_does_not_simply_trudne_jedno_nie_proste.png" />
+    <Resource Include="source\outstanding_movedobre_zaskakujace_rozwiazanie_geniealne.png" />
+    <Resource Include="source\roll_safe_sprytne.png" />
+    <Resource Include="source\same_podobne_podobizna_spiderman.png" />
+    <Resource Include="source\the_future_is_now_old_man_przyszlosc_jest_teraz_stary_mezczyzno.png" />
+    <Resource Include="source\well_of_course_i_know_him_hes_me_oczywiscie_ze_go_znam_to_ja.png" />
+    <Resource Include="source\well_yes_but_actually_no_tak_ale_nie.png" />
+    <Resource Include="source\worldwide_swiatowy.png" />
+    <Resource Include="source\you_are_already_dead_ty_jestes_martwy.png" />
+    <Resource Include="source\you_are_tearing_me_apart_the_room.png" />
+    <Resource Include="source\you_have_become_the_very_thing_you_swore_to_destroy_jestes_tym_co_miales_zniszczyc.png" />
+    <Resource Include="source\z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
