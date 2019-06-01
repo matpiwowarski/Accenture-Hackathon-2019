@@ -74,15 +74,15 @@ namespace Server
         public static string GetMessage(string name)
         {
             int index = listOfClients.FindIndex(client => client.name == name);
-
+            Memecryptor memecryptor = Memecryptor.Instance;
             try
             {
-                return listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text;
+                return memecryptor.PutWordGetMeme(listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text);
             }
             catch
             {
 
-                return "brak wjadomosci";
+                return "";
 
             }
         }
