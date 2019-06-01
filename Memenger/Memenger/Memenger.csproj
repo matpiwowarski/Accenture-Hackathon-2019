@@ -123,5 +123,8 @@
     <Resource Include="source\you_have_become_the_very_thing_you_swore_to_destroy_jestes_tym_co_miales_zniszczyc.png" />
     <Resource Include="source\z.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,6 +30,8 @@
             </ImageSource>
             <ImageSource x:Key="outstanding_movedobre_zaskakujace_rozwiazanie_geniealne.png">source/outstanding_movedobre_zaskakujace_rozwiazanie_geniealne.png
             </ImageSource>
+            <ImageSource x:Key="reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.png">source/reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.png
+            </ImageSource>
             <ImageSource x:Key="roll_safe_sprytne.png">source/roll_safe_sprytne.png
             </ImageSource>
             <ImageSource x:Key="same_podobne_podobizna_spiderman.png">source/same_podobne_podobizna_spiderman.png
