@@ -74,24 +74,24 @@ namespace Memenger
                 string sentText = TextBox.Text.ToString();
                 TextBox.Text = "";
 
-                Memecryptor memecryptor = Memecryptor.Instance;
+               // Memecryptor memecryptor = Memecryptor.Instance;
 
-                string resourceName = memecryptor.PutWordGetMeme(sentText);
+                //string resourceName = memecryptor.PutWordGetMeme(sentText);
 
 
      
-                proxy.Login(Username_Label.Text.ToString());
-                proxy.SendMessage(sentText, Username_Label.Text.ToString(), ContactNameLabel.Text.ToString());
+                proxy.Login(Contact_Label.Text.ToString());
+                proxy.SendMessage(sentText, Contact_Label.Text.ToString(), ContactNameLabel.Text.ToString());
 
 
 
-                SendMeme(resourceName);
+                //SendMeme(resourceName);
             }
         }
 
         void update(object sender, EventArgs e)
         {
-            string fileName = proxy.GetMessage(Username_Label.Text.ToString());
+            string fileName = proxy.GetMessage(ContactNameLabel.Text.ToString());
             //string fileName = "";
             if (fileName != "")
             {
@@ -109,8 +109,8 @@ namespace Memenger
                 }
                 else
                 {
-                    UserImage1.Source = ContactImage2.Source;
-                    UserImage2.Source = ContactImage3.Source;
+                    UserImage1.Source = UserImage2.Source;
+                    UserImage2.Source = UserImage3.Source;
 
                     ContactImage1.Source = UserImage2.Source;
                     ContactImage2.Source = UserImage3.Source;
@@ -129,7 +129,7 @@ namespace Memenger
         private void Username_Label_TextChanged(object sender, TextChangedEventArgs e)
         {
             User user = User.Instance;
-            user.Name = Username_Label.Text.ToString();
+            user.Name = Contact_Label.Text.ToString();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
