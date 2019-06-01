@@ -91,7 +91,7 @@ namespace Memenger
 
      
                 proxy.Login(Contact_Label.Text.ToString());
-                proxy.SendMessage(sentText, Contact_Label.Text.ToString(), ContactNameLabel.Text.ToString());
+                proxy.SendMessage(sentText, Contact_Label.Text.ToString(), Contact_Label.Text.ToString());
 
 
 
@@ -132,6 +132,7 @@ namespace Memenger
                         if (UserImage3 != null)
                             UserImage3.Source = null; 
 
+
                         ContactImage1.Source = ContactImage2.Source;
                         ContactImage2.Source = ContactImage3.Source;
                         ContactImage3.Source = (ImageSource)FindResource(fileName);
@@ -149,7 +150,7 @@ namespace Memenger
         {
             clearChat();
             Contact contact = Contact.Instance;
-            contact.Name = ContactNameLabel.Text.ToString();
+            contact.Name = Contact_Label.Text.ToString();
         }
 
         private void Username_Label_TextChanged(object sender, TextChangedEventArgs e)
