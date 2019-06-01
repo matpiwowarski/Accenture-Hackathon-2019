@@ -218,6 +218,20 @@ namespace Memenger
                 UserImage2.Source = null;
             if (UserImage3 != null)
                 UserImage3.Source = null;
+
+            if (ContactDate1 != null)
+                ContactDate1.Content = null;
+            if (ContactDate2 != null)
+                ContactDate2.Content = null;
+            if (ContactDate3 != null)
+                ContactDate3.Content = null;
+
+            if (UserDate1 != null)
+                UserDate1.Content = null;
+            if (UserDate2 != null)
+                UserDate2.Content = null;
+            if (UserDate3 != null)
+                UserDate3.Content = null;
         }
 
         private void RomekButton_Click(object sender, RoutedEventArgs e)
@@ -239,5 +253,23 @@ namespace Memenger
         {
             Contact_Label.Text = "Pawel";
         }
+
+        private void LoginRomekButton_Click(object sender, RoutedEventArgs e)
+        {
+            Username_Label.Text = "Romek";
+        }
+        private void LoginMichalButton_Click(object sender, RoutedEventArgs e)
+        {
+            Username_Label.Text = "Michal";
+        }
+        private void LoginMateuszButton_Click(object sender, RoutedEventArgs e)
+        {
+            Username_Label.Text = "Mateusz";
+        }
+        private void LoginPawelButton_Click(object sender, RoutedEventArgs e)
+        {
+            Username_Label.Text = "Pawel";
+        }
+        
     }
 }
