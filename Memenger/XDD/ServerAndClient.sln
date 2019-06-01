@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XDD", "XDD\XDD.csproj", "{685DBDE5-EA4A-40E6-87C1-00720CAA757A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "XDD\Server.csproj", "{685DBDE5-EA4A-40E6-87C1-00720CAA757A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{D44CCDD3-C342-4575-B98D-AC513118DCAD}"
 EndProject

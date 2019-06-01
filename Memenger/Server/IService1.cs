@@ -17,6 +17,7 @@ namespace Server
         string GetData(int value);
 
         [OperationContract]
+        [WebGet]
         string XD(int value);
 
         byte[] GetByte(byte[] data);
