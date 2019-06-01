@@ -80,15 +80,6 @@ namespace Memenger
             }
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Send_Button_AccessKeyPressed(object sender, AccessKeyPressedEventArgs e)
-        {
-
-        }
 
         private void ContactNameLabel_TextChanged(object sender, TextChangedEventArgs e)
         {
