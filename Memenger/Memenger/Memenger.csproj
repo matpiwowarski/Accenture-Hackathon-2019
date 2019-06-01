@@ -102,7 +102,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="source\braki_pustka_404.png" />
-    <Resource Include="source\cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witaj.png" />
     <Resource Include="source\hackerman_haker_koder_programista_spec_technologia.png" />
     <Resource Include="source\how_do_you_do_fellow_kids_relatable.png" />
     <Resource Include="source\improve_adapt_overcome_samodoskonalenie_przetrwanie_improwizacja_adaptacja_pokonanie.png" />
@@ -125,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="source\reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

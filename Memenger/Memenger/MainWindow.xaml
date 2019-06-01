@@ -10,7 +10,7 @@
         <ResourceDictionary>
             <ImageSource x:Key="braki_pustka_404.png">source/braki_pustka_404.png
             </ImageSource>
-            <ImageSource x:Key="cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witaj.png">source/cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witaj.png
+            <ImageSource x:Key="cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png">source/cze, cześć, czołem, elo, graba, hej, hejka, serwus, siemanko, siemasz, się masz, strzała, zdrówko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png
             </ImageSource>
             <ImageSource x:Key="hackerman_haker_koder_programista_spec_technologia.png">source/hackerman_haker_koder_programista_spec_technologia.png
             </ImageSource>
