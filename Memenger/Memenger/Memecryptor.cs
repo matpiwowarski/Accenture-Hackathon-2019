@@ -66,7 +66,7 @@ namespace Memenger
 
         public void FindStringInMemes(string word)
         {
-            for(int i = 0; i < memeList.Count; i++) 
+            for (int i = 0; i < memeList.Count; i++)
             {
                 if (memeList[i].FileName.Contains(word))
                 {
@@ -75,5 +75,19 @@ namespace Memenger
             }
         }
 
+        public string PutWordGetMeme(string word)
+        {
+            MemesToDisplay.Clear();
+            FindStringInMemes(word);
+
+            if (MemesToDisplay.Count > 0)
+            {
+                return MemesToDisplay[0].FileName.ToString();
+            }
+            else
+            {
+                return "impossible_perhaps_the_archives_are_incomplete.png";
+            }
+        }
     }
 }
