@@ -7,7 +7,7 @@ using System.Net.Sockets;
 
 
 
-namespace XDD
+namespace Server
 {
 
 
