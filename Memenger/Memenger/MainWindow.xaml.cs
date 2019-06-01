@@ -49,12 +49,14 @@ namespace Memenger
                     src.UriSource = new Uri(@memePath);
                     src.EndInit();
 
-                    Image newMeme = new Image();
-                    newMeme.Source = src;
-                    newMeme.Stretch = Stretch.Uniform;
-                    newMeme.Height = 100;
+                    Image newMeme = new Image
+                    {
+                        Source = src,
+                        Stretch = Stretch.Uniform,
+                        Height = 100
+                    };
 
-                    
+
                 }
             }
         }
