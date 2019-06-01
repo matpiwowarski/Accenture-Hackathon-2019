@@ -76,6 +76,7 @@ namespace Memenger
                 
             }
         }
+
         private void Send_Button_Click(object sender, RoutedEventArgs e)
         {
             if(TextBox.Text.Length > 0 )
@@ -180,6 +181,26 @@ namespace Memenger
                 UserImage2.Source = null;
             if (UserImage3 != null)
                 UserImage3.Source = null;
+        }
+
+        private void RomekButton_Click(object sender, RoutedEventArgs e)
+        {
+            Contact_Label.Text = "Romek";
+        }
+
+        private void MichalButton_Click(object sender, RoutedEventArgs e)
+        {
+            Contact_Label.Text = "Michal";
+        }
+
+        private void MateuszButton_Click(object sender, RoutedEventArgs e)
+        {
+            Contact_Label.Text = "Mateusz";
+        }
+
+        private void PawelButton_Click(object sender, RoutedEventArgs e)
+        {
+            Contact_Label.Text = "Pawel";
         }
     }
 }

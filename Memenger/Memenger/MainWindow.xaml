@@ -105,17 +105,18 @@
             <Label x:Name="MichalLabel" Content="Michal" HorizontalAlignment="Center" Margin="0,0,0,150" VerticalAlignment="Center" FontSize="24" Foreground="#E5FFFFFF"/>
             <Label x:Name="MateuszLabel" Content="Mateusz" HorizontalAlignment="Center" Margin="0,0,0,-150" VerticalAlignment="Center" FontSize="24" Foreground="#E5FFFFFF"/>
             <Label x:Name="PawelLabel" Content="Pawel" HorizontalAlignment="Center" Margin="0,0,0,-450" VerticalAlignment="Center" FontSize="24" Foreground="#E5FFFFFF"/>
-            <Button x:Name="RomekButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Margin="0,0,0,350" Height="64" BorderBrush="{x:Null}" Foreground="#E5FFFFFF" Background="#19FFFFFF">
+            <Button x:Name="RomekButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Margin="0,0,0,350" Height="64" BorderBrush="{x:Null}" Foreground="#E5FFFFFF" Background="#19FFFFFF" Click="RomekButton_Click">
                 <Image x:Name="Contact1_Image" Source="source/icons/Contact1.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
-            <Button x:Name="MichalButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Margin="0,0,0, 50" Height="64" BorderBrush="{x:Null}" Foreground="#E5FFFFFF" Background="#19FFFFFF">
+            <Button x:Name="MichalButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Margin="0,0,0, 50" Height="64" BorderBrush="{x:Null}" Foreground="#E5FFFFFF" Background="#19FFFFFF" Click="MichalButton_Click">
                 <Image x:Name="Contact2_Image" Source="source/icons/Contact2.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
-            <Button x:Name="MateuszButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Margin="0,0,0,-250" Height="64" BorderBrush="{x:Null}" Foreground="#E5FFFFFF" Background="#19FFFFFF">
-                <Image x:Name="Contact3_Image" Source="source/icons/Contact3.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </Button>
-            <Button x:Name="PawelButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Margin="0,0,0,-550" Height="64" BorderBrush="{x:Null}" Foreground="#E5FFFFFF" Background="#19FFFFFF">
+            <Button x:Name="PawelButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Margin="0,0,0,-550" Height="64" BorderBrush="{x:Null}" Foreground="#E5FFFFFF" Background="#19FFFFFF" Click="PawelButton_Click">
                 <Image x:Name="Contact4_Image" Source="source/icons/Contact4.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            </Button>
+            <Button x:Name="MateuszButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Margin="0,0,0,-250" Height="64" BorderBrush="{x:Null}" Foreground="#E5FFFFFF" Background="#19FFFFFF" Click="MateuszButton_Click">
+                <Image x:Name="Contact3_Image" Source="source/icons/Contact3.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
 
         </Grid>
