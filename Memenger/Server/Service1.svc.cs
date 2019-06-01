@@ -14,6 +14,7 @@ namespace Server
         public string text;
         public string sender;
         public string reciever;
+        public bool isRead;
         // byte[] meme;
         // DateTime sentTime;
         // DateTime readTime;
@@ -24,6 +25,7 @@ namespace Server
             this.text = _text;
             this.sender = _sender;
             this.reciever = _reciever;
+            this.isRead = false;
         }
 
     }
@@ -63,34 +65,21 @@ namespace Server
         {
             int index = listOfClients.FindIndex(client => client.name == reciever);
 
-            if (index == -1) return "no user found";
-            listOfClients[index].Unread++;
-            listOfClients[index].AllMessages.Add(new Message(text, sender, reciever));
-
-            return text;
-
-        }
-
-        public static string SendMessageForEach(string text, string sender, string reciever)
-        {
-            int index = -1;
-            bool found = false;
-            foreach(var elem in listOfClients)
+            if (index == -1)
             {
-                index++;
-                if (elem.name == reciever)
-                {
-                    found = true;
-                    break;
-                }
+                LogIn(reciever);
+                //return "no user found";
             }
-            if (!found) index = 0;
+
+            index = listOfClients.FindIndex(client => client.name == reciever);
+
             listOfClients[index].Unread++;
             listOfClients[index].AllMessages.Add(new Message(text, sender, reciever));
 
             return text;
 
         }
+
 
 
         public static string GetMessageOnlyText(string name)
@@ -103,9 +92,20 @@ namespace Server
                 else
                 {
                     listOfClients[index].Unread--;
-                    return listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text;
+                    var temp = "";
+                    foreach (var elem in listOfClients[index].AllMessages)
+                    {
+                        if (!elem.isRead)
+                        {
+                            elem.isRead = true;
+                            return elem.text;
+                        }
+                    }
+                    // return listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text;
                     //return listOfClients[index].AllMessages[- 1].text;
+
                 }
+                return "";
             }
             catch
             {
