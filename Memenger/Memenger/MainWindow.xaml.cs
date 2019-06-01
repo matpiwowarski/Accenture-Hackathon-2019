@@ -39,23 +39,13 @@ namespace Memenger
                 memecryptor.Text = sentText;
                 memecryptor.FindStringInMemes(sentText);
 
-                for(int i = 0; i < memecryptor.MemesToDisplay.Count; i++)
+                if(memecryptor.MemesToDisplay.Count > 0)
                 {
-                    // create empty image
-
-                    BitmapImage src = new BitmapImage();
-                    src.BeginInit();
-                    string memePath = "C:/Users/Mateusz/Documents/GitHub/Accenture-Hackathon-2019/Memenger/Memenger/source/" + memecryptor.MemesToDisplay[i].FileName.ToString();
-                    src.UriSource = new Uri(@memePath);
-                    src.EndInit();
-
-                    Image newMeme = new Image();
-                    newMeme.Source = src;
-                    newMeme.Stretch = Stretch.Uniform;
-                    newMeme.Height = 100;
-
+                    string resourceName = memecryptor.MemesToDisplay[0].FileName.ToString();
                     
+                    UserImage1.Source = (ImageSource)FindResource(resourceName);
                 }
+                memecryptor.MemesToDisplay.Clear();
             }
         }
 
