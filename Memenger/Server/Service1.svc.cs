@@ -33,7 +33,7 @@ namespace Server
     {
         public string name;
         public List<Message> AllMessages = new List<Message>();
-        int Unread = 0;
+        public int Unread = 0;
 
         public Client(string name)
         {
@@ -65,8 +65,10 @@ namespace Server
             if (index == -1)
             {
                 listOfClients[0].AllMessages.Add(new Message(text, sender, sender));
+                listOfClients[0].Unread++;
             }
             else listOfClients[index].AllMessages.Add(new Message(text, sender, reciever));
+
             return text;
 
         }
@@ -77,6 +79,8 @@ namespace Server
             Memecryptor memecryptor = Memecryptor.Instance;
             try
             {
+                if (listOfClients[index].Unread == 0) return "";
+                listOfClients[index].Unread--;
                 return memecryptor.PutWordGetMeme(listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text);
             }
             catch
