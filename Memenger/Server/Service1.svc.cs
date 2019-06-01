@@ -8,32 +8,100 @@ using System.Text;
 
 namespace Server
 {
+    class Message
+    {
+        public string text;
+        public string sender;
+        public string reciever;
+        // byte[] meme;
+        // DateTime sentTime;
+        // DateTime readTime;
+        // bool isRead;
+
+        public Message(string text, string sender, string reciever)
+        {
+            this.text = text;
+            this.sender = sender;
+            this.reciever = reciever;
+        }
+
+    }
+
+
+    class Client
+    {
+        public string name;
+        public List<Message> AllMessages = new List<Message>();
+        int Unread = 0;
+
+        public Client(string name)
+        {
+            this.name = name;
+        }
+    }
+
+    static class AllClients
+    {
+        public static int loggedIn = 0;
+        public static List<Client> listOfClients = new List<Client>();
+
+
+        public static void LogIn(string name)
+        {
+            listOfClients.Add(new Client(name));
+            loggedIn++;
+        }
+
+        public static void SendMessage(string text, string sender, string reciever)
+        {
+            listOfClients.Find(client => client.name == reciever).AllMessages.Add(new Message(text, sender, reciever));
+
+
+        }
+
+        public static string GetMessage(string name)
+        {
+            int index = listOfClients.FindIndex(client => client.name == name);
+
+            try
+            {
+                return listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text;
+            }
+            catch
+            {
+
+                return "brak wjadomosci";
+
+            }
+        }
+
+    }
+
+
+
     // UWAGA: możesz użyć polecenia „Zmień nazwę” w menu „Refaktoryzuj”, aby zmienić nazwę klasy „Service1” w kodzie, usłudze i pliku konfiguracji.
     // UWAGA: aby uruchomić klienta testowego WCF w celu przetestowania tej usługi, wybierz plik Service1.svc lub Service1.svc.cs w eksploratorze rozwiązań i rozpocznij debugowanie.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+
+
+        public void Login(string name)
         {
-            return string.Format("You entered: {0}", value);
+            AllClients.LogIn(name);
+        }
+        public int CheckLoggedPeople()
+        {
+            return AllClients.loggedIn;
         }
 
-        public string XD(int value)
+        public void SendMessage(string text, string sender, string reciever)
         {
-
-            return (value * 2).ToString();
+            AllClients.SendMessage(text, sender, reciever);
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public string GetMessage(string name)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+           return  AllClients.GetMessage(name);
         }
     }
 }
