@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -143,13 +143,12 @@
     <Resource Include="source\reality_can_be_whatever_i_want_rzeczywistosc_moze_byc_tym_chce.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="source\cze, czeœæ, czo³em, elo, graba, hej, hejka, serwus, siemanko, siemasz, siê masz, strza³a, zdrówko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="source\braki_pustka_404_impossible_perhaps_the_archives_are_incomplete.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="source\ah_shit_here_we_go_again.png" />
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +168,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\cze, czesc, czolem, elo, graba, hej, hejka, serwus, siemanko, siemasz, sie masz, strzala, zdrowko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
