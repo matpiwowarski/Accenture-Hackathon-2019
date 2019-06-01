@@ -90,8 +90,8 @@ namespace Memenger
 
 
      
-                proxy.Login(Username_Label.Text.ToString());
-                proxy.SendMessage(sentText, Username_Label.Text.ToString(), ContactNameLabel.Text.ToString());
+                proxy.Login(Contact_Label.Text.ToString());
+                proxy.SendMessage(sentText, Contact_Label.Text.ToString(), ContactNameLabel.Text.ToString());
 
 
 
@@ -106,6 +106,7 @@ namespace Memenger
             Memecryptor memecryptor = Memecryptor.Instance;
 
             //fileName = memecryptor.PutWordGetMeme(fileName);
+
             //string fileName = "";
             if (fileName != "")
             {
@@ -155,7 +156,7 @@ namespace Memenger
         {
             clearChat();
             User user = User.Instance;
-            user.Name = Username_Label.Text.ToString();
+            user.Name = Contact_Label.Text.ToString();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
