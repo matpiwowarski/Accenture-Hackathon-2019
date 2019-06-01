@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Timers;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Memenger
 {
@@ -20,10 +23,16 @@ namespace Memenger
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static DispatcherTimer _timer = new DispatcherTimer();
         ServiceReference1.Service1Client proxy;
+        public static DispatcherTimer Timer { get => _timer; set => _timer = value; }
 
         public MainWindow()
         {
+            Timer.Tick += new EventHandler(update);
+            Timer.Interval = new TimeSpan(0, 0, 1);
+            Timer.Start();
+
             Memecryptor memecryptor = Memecryptor.Instance;
             User user = User.Instance;
             Contact contact = Contact.Instance;
@@ -80,6 +89,36 @@ namespace Memenger
             }
         }
 
+        void update(object sender, EventArgs e)
+        {
+            //string fileName = proxy.GetMessage(Username_Label.Text);
+            string fileName = "";
+            if (fileName != "")
+            {
+                if (UserImage1.Source == null && ContactImage1.Source == null)
+                {
+                    ContactImage1.Source = (ImageSource)FindResource(fileName);
+                }
+                else if (UserImage2.Source == null && ContactImage2.Source == null)
+                {
+                    ContactImage2.Source = (ImageSource)FindResource(fileName);
+                }
+                else if (UserImage3.Source == null && ContactImage3.Source == null)
+                {
+                    ContactImage3.Source = (ImageSource)FindResource(fileName);
+                }
+                else
+                {
+                    UserImage1.Source = ContactImage2.Source;
+                    UserImage2.Source = ContactImage3.Source;
+
+                    ContactImage1.Source = UserImage2.Source;
+                    ContactImage2.Source = UserImage3.Source;
+                    ContactImage3.Source = (ImageSource)FindResource(fileName);
+                }
+            }
+            fileName = "";
+        }
 
         private void ContactNameLabel_TextChanged(object sender, TextChangedEventArgs e)
         {
