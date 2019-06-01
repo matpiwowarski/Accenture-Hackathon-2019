@@ -79,30 +79,30 @@
             <Button x:Name="Send_Button" HorizontalAlignment="Center" Margin="0,550,0,60" VerticalAlignment="Bottom" Width="64" Height="64" Click="Send_Button_Click" IsDefault="True">
                 <Image x:Name="Logo_Image" Source="source/icons/logo.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
-            <Border x:Name="UserImage1Border" BorderThickness="1" HorizontalAlignment="Left" Height="175" Margin="40,70,0,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
+            <Border x:Name="UserImage1Border" HorizontalAlignment="Left" Height="175" Margin="40,70,0,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="UserImage1"/>
             </Border>
-            <Border x:Name="UserImage2Border" BorderThickness="1"  HorizontalAlignment="Left" Height="175" Margin="40,275,0,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
+            <Border x:Name="UserImage2Border" HorizontalAlignment="Left" Height="175" Margin="40,275,0,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="UserImage2"/>
             </Border>
-            <Border x:Name="UserImage3Border" BorderThickness="1"  HorizontalAlignment="Left" Height="175" Margin="40,480,0,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
+            <Border x:Name="UserImage3Border" HorizontalAlignment="Left" Height="175" Margin="40,480,0,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="UserImage3"/>
             </Border>
-            <Border x:Name="ContactImage1Border" BorderThickness="1"  HorizontalAlignment="Right" Height="175" Margin="0,70,40,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
+            <Border x:Name="ContactImage1Border" HorizontalAlignment="Right" Height="175" Margin="0,70,40,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="ContactImage1"/>
             </Border>
-            <Border x:Name="ContactImage2Border" BorderThickness="1"  HorizontalAlignment="Right" Height="175" Margin="0,275,40,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
+            <Border x:Name="ContactImage2Border" HorizontalAlignment="Right" Height="175" Margin="0,275,40,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="ContactImage2"/>
             </Border>
-            <Border x:Name="ContactImage3Border" BorderThickness="1"  HorizontalAlignment="Right" Height="175" Margin="0,480,40,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
+            <Border x:Name="ContactImage3Border" HorizontalAlignment="Right" Height="175" Margin="0,480,40,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="ContactImage3"/>
             </Border>
-            <Label x:Name="UserDate1" Content="" HorizontalAlignment="Left" Margin="336,244,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="UserDate2" Content="" HorizontalAlignment="Left" Margin="336,449,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="UserDate3" Content="" HorizontalAlignment="Left" Margin="336,655,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="ContactDate1" Content="" HorizontalAlignment="Left" Margin="759,245,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.759,0.769"/>
-            <Label x:Name="ContactDate2" Content="" HorizontalAlignment="Left" Margin="759,449,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="ContactDate3" Content="" HorizontalAlignment="Left" Margin="759,655,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="UserDate1" Content="" HorizontalAlignment="Left" Margin="250,244,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="UserDate2" Content="" HorizontalAlignment="Left" Margin="250,449,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="UserDate3" Content="" HorizontalAlignment="Left" Margin="250,655,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="ContactDate1" Content="" HorizontalAlignment="Right" Margin="0,245,250,0" VerticalAlignment="Top" RenderTransformOrigin="5.759,0.769"/>
+            <Label x:Name="ContactDate2" Content="" HorizontalAlignment="Right" Margin="0,450,250,0" VerticalAlignment="Top"/>
+            <Label x:Name="ContactDate3" Content="" HorizontalAlignment="Right" Margin="0,655,250,0" VerticalAlignment="Top"/>
 
         </Grid>
         <Grid x:Name="User_Grid" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="163">
