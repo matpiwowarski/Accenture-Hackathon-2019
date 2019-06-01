@@ -8,46 +8,75 @@ using System.Text;
 
 namespace Server
 {
+    class Message
+    {
+        public string text;
+        public string sender;
+        public string reciever;
+        // byte[] meme;
+        // DateTime sentTime;
+        // DateTime readTime;
+        // bool isRead;
+
+        public Message(string text, string sender, string reciever)
+        {
+            this.text = text;
+            this.sender = sender;
+            this.reciever = reciever;
+        }
+
+    }
+
 
     class Client
     {
         public string name;
-        //public List<messages>;
+        public List<Message> AllMessages = new List<Message>();
+        int Unread = 0;
 
+        public Client(string name)
+        {
+            this.name = name;
+        }
     }
 
     static class AllClients
     {
         public static int loggedIn = 0;
-        public static List<Client> listOfClients;
+        public static List<Client> listOfClients = new List<Client>();
 
 
-    }
-
-
-
-    static class PrzechowywaneDane
-    {
-        public static int iloscZalogOsob = 0;
-        public static List<string> zalogowaneOsoby = new List<string>();
-
-        public static void Login(string name)
+        public static void LogIn(string name)
         {
-            iloscZalogOsob++;
-            zalogowaneOsoby.Add(name);
+            listOfClients.Add(new Client(name));
+            loggedIn++;
         }
 
-        static public string CheckLoggedPeople()
+        public static void SendMessage(string text, string sender, string reciever)
         {
-            string zwracanie;
-            zwracanie="ilosc osob: " + iloscZalogOsob;
-            foreach (var osoby in zalogowaneOsoby)
+            listOfClients.Find(client => client.name == reciever).AllMessages.Add(new Message(text, sender, reciever));
+
+
+        }
+
+        public static string GetMessage(string name)
+        {
+            int index = listOfClients.FindIndex(client => client.name == name);
+
+            try
             {
-                zwracanie+=osoby;
+                return listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text;
             }
-            return zwracanie;
+            catch
+            {
+
+                return "brak wjadomosci";
+
+            }
         }
+
     }
+
 
 
     // UWAGA: możesz użyć polecenia „Zmień nazwę” w menu „Refaktoryzuj”, aby zmienić nazwę klasy „Service1” w kodzie, usłudze i pliku konfiguracji.
@@ -56,45 +85,23 @@ namespace Server
     {
 
 
-
-
         public void Login(string name)
         {
-            PrzechowywaneDane.Login(name);
+            AllClients.LogIn(name);
         }
-        public string CheckLoggedPeople()
+        public int CheckLoggedPeople()
         {
-            return PrzechowywaneDane.CheckLoggedPeople();
-        }
-
-        public string GetData(int value)
-        {
-            return string.Format("You entered: {0}", value);
+            return AllClients.loggedIn;
         }
 
-        public string XD(int value)
+        public void SendMessage(string text, string sender, string reciever)
         {
-
-            return (value * 2).ToString();
+            AllClients.SendMessage(text, sender, reciever);
         }
 
-
-        public byte[] GetByte(byte[] data)
+        public string GetMessage(string name)
         {
-            return data;
-        }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+           return  AllClients.GetMessage(name);
         }
     }
 }

@@ -8,7 +8,6 @@ using System.Text;
 
 namespace Server
 {
-    // UWAGA: możesz użyć polecenia „Zmień nazwę” w menu „Refaktoryzuj”, aby zmienić nazwę interfejsu „IService1” w kodzie i pliku konfiguracji.
     [ServiceContract]
     public interface IService1
     {
@@ -16,22 +15,15 @@ namespace Server
         void Login(string name);
 
         [OperationContract]
-        string CheckLoggedPeople();
+        int CheckLoggedPeople();
 
         [OperationContract]
-        string GetData(int value);
+        void SendMessage(string text, string sender, string reciever);
 
         [OperationContract]
-        string XD(int value);
-
-        byte[] GetByte(byte[] data);
+        string GetMessage(string name);
 
 
-        [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
-
-
-        // TODO: dodaj tutaj operacje usługi
     }
 
 
