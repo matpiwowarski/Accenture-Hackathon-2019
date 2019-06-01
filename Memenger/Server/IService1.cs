@@ -18,7 +18,7 @@ namespace Server
         int CheckLoggedPeople();
 
         [OperationContract]
-        void SendMessage(string text, string sender, string reciever);
+        string SendMessage(string text, string sender, string reciever);
 
         [OperationContract]
         string GetMessage(string name);
