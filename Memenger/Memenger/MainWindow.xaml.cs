@@ -74,9 +74,9 @@ namespace Memenger
                 string sentText = TextBox.Text.ToString();
                 TextBox.Text = "";
 
-               // Memecryptor memecryptor = Memecryptor.Instance;
+                Memecryptor memecryptor = Memecryptor.Instance;
 
-                //string resourceName = memecryptor.PutWordGetMeme(sentText);
+                string resourceName = memecryptor.PutWordGetMeme(sentText);
 
 
      
@@ -85,7 +85,7 @@ namespace Memenger
 
 
 
-                //SendMeme(resourceName);
+                SendMeme(resourceName);
             }
         }
 
