@@ -38,8 +38,25 @@ namespace Memenger
                 Memecryptor memecryptor = Memecryptor.Instance;
 
                 string resourceName = memecryptor.PutWordGetMeme(sentText);
-                    
-                UserImage1.Source = (ImageSource)FindResource(resourceName);
+
+                if (UserImage1.Source == null)
+                {
+                    UserImage1.Source = (ImageSource)FindResource(resourceName);
+                }
+                else if(UserImage2.Source == null)
+                {
+                    UserImage2.Source = (ImageSource)FindResource(resourceName);
+                }
+                else if (UserImage3.Source == null)
+                {
+                    UserImage3.Source = (ImageSource)FindResource(resourceName);
+                }
+                else
+                {
+                    UserImage1.Source = UserImage2.Source;
+                    UserImage2.Source = UserImage3.Source;
+                    UserImage3.Source = (ImageSource)FindResource(resourceName);
+                }
             }
         }
 
