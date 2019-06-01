@@ -77,7 +77,8 @@ namespace Memenger
             }
             else
             {
-                return "z.png";
+                //return "z.png";
+                return "";
             }
         }
     }

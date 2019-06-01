@@ -19,11 +19,11 @@ namespace Server
         // DateTime readTime;
         // bool isRead;
 
-        public Message(string text, string sender, string reciever)
+        public Message(string _text, string _sender, string _reciever)
         {
-            this.text = text;
-            this.sender = sender;
-            this.reciever = reciever;
+            this.text = _text;
+            this.sender = _sender;
+            this.reciever = _reciever;
         }
 
     }
@@ -62,18 +62,59 @@ namespace Server
         public static string SendMessage(string text, string sender, string reciever)
         {
             int index = listOfClients.FindIndex(client => client.name == reciever);
-            if (index == -1)
-            {
-                listOfClients[0].AllMessages.Add(new Message(text, sender, sender));
-                listOfClients[0].Unread++;
-            }
-            else listOfClients[index].AllMessages.Add(new Message(text, sender, reciever));
+            if (index == -1) index = 0;
+            listOfClients[index].Unread++;
+            listOfClients[index].AllMessages.Add(new Message(text, sender, reciever));
 
             return text;
 
         }
 
-        public static string GetMessage(string name)
+        public static string SendMessageForEach(string text, string sender, string reciever)
+        {
+            int index = -1;
+            bool found = false;
+            foreach(var elem in listOfClients)
+            {
+                index++;
+                if (elem.name == reciever)
+                {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) index = 0;
+            listOfClients[index].Unread++;
+            listOfClients[index].AllMessages.Add(new Message(text, sender, reciever));
+
+            return text;
+
+        }
+
+
+        public static string GetMessageOnlyText(string name)
+        {
+            int index = listOfClients.FindIndex(client => client.name == name);
+            //Memecryptor memecryptor = Memecryptor.Instance;
+            try
+            {
+                if (listOfClients[index].Unread == 0) return "";
+                else
+                {
+                    listOfClients[index].Unread--;
+                    return listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text;
+                    //return listOfClients[index].AllMessages[- 1].text;
+                }
+            }
+            catch
+            {
+
+                return "";
+
+            }
+        }
+
+        public static string GetMessage(string name)        //patrz wywolanie na samym dole
         {
             int index = listOfClients.FindIndex(client => client.name == name);
             Memecryptor memecryptor = Memecryptor.Instance;
@@ -128,14 +169,15 @@ namespace Server
             return AllClients.loggedIn;
         }
 
-        public void SendMessage(string text, string sender, string reciever)
+        public string SendMessage(string text, string sender, string reciever)
         {
-            AllClients.SendMessage(text, sender, reciever);
+            return AllClients.SendMessage(text, sender, reciever);
         }
 
         public string GetMessage(string name)
         {
-            return AllClients.GetMessage(name);
+            //return AllClients.GetMessage(name);
+            return AllClients.GetMessageOnlyText(name);
         }
     }
 }

@@ -92,9 +92,14 @@ namespace Memenger
         void update(object sender, EventArgs e)
         {
             string fileName = proxy.GetMessage(Username_Label.Text.ToString());
+
+            Memecryptor memecryptor = Memecryptor.Instance;
+
+            //fileName = memecryptor.PutWordGetMeme(fileName);
             //string fileName = "";
             if (fileName != "")
             {
+                fileName = memecryptor.PutWordGetMeme(fileName);
                 if (UserImage1.Source == null && ContactImage1.Source == null)
                 {
                     ContactImage1.Source = (ImageSource)FindResource(fileName);
@@ -109,11 +114,11 @@ namespace Memenger
                 }
                 else
                 {
-                    UserImage1.Source = ContactImage2.Source;
-                    UserImage2.Source = ContactImage3.Source;
+                    UserImage1.Source = UserImage2.Source;
+                    UserImage2.Source = UserImage3.Source;
 
-                    ContactImage1.Source = UserImage2.Source;
-                    ContactImage2.Source = UserImage3.Source;
+                    ContactImage1.Source = ContactImage2.Source;
+                    ContactImage2.Source = ContactImage3.Source;
                     ContactImage3.Source = (ImageSource)FindResource(fileName);
                 }
             }
