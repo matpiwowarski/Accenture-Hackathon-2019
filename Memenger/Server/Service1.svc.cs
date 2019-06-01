@@ -93,7 +93,9 @@ namespace Server
 
             try
             {
-                return listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text;
+
+                return memecryptor.PutWordGetMeme(listOfClients[index].AllMessages[listOfClients[index].AllMessages.Count() - 1].text);
+               
             }
             catch
             {

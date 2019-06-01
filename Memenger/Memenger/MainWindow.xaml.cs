@@ -92,5 +92,10 @@ namespace Memenger
             User user = User.Instance;
             user.Name = Username_Label.Text.ToString();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
