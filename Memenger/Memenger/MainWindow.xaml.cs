@@ -61,8 +61,10 @@ namespace Memenger
                 }
                 else
                 {
-                    //ContactImage1.Source = ContactImage2.Source;
-                    //ContactImage2.Source = ContactImage3.Source;
+                    ContactImage1.Source = ContactImage2.Source;
+                    ContactImage2.Source = ContactImage3.Source;
+                    if (ContactImage3 != null)
+                        ContactImage3.Source = null;
 
                     UserImage1.Source = UserImage2.Source;
                     UserImage2.Source = UserImage3.Source;
@@ -126,6 +128,8 @@ namespace Memenger
                     {
                         UserImage1.Source = UserImage2.Source;
                         UserImage2.Source = UserImage3.Source;
+                        if (UserImage3 != null)
+                            UserImage3.Source = null; 
 
                         ContactImage1.Source = ContactImage2.Source;
                         ContactImage2.Source = ContactImage3.Source;
