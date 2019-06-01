@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Memenger
 {
     // Singleton Pattern 
-    class Memecryptor
+    public class Memecryptor
     {
         private List<Meme> memeList = new List<Meme>(); // memes with file names
         private List<Meme> memesToDisplay = new List<Meme>(); // memes with file names

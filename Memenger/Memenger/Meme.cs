@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Memenger
 {
-   class Meme
+   public class Meme
     {
         private string fileName;
         public string FileName { get => fileName; set => fileName = value; }

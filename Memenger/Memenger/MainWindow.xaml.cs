@@ -20,12 +20,14 @@ namespace Memenger
     /// </summary>
     public partial class MainWindow : Window
     {
+        ServiceReference1.Service1Client proxy;
+
         public MainWindow()
         {
             Memecryptor memecryptor = Memecryptor.Instance;
             User user = User.Instance;
             Contact contact = Contact.Instance;
-
+            proxy  = new ServiceReference1.Service1Client();
             string memeFolderPath = "../../source/";
             memecryptor.AddMemesFromFolder(memeFolderPath);
 
@@ -66,6 +68,13 @@ namespace Memenger
                 Memecryptor memecryptor = Memecryptor.Instance;
 
                 string resourceName = memecryptor.PutWordGetMeme(sentText);
+
+
+     
+                proxy.Login(Username_Label.Text.ToString());
+                proxy.SendMessage(sentText, Username_Label.Text.ToString(), ContactNameLabel.Text.ToString());
+
+
 
                 SendMeme(resourceName);
             }

@@ -32,7 +32,7 @@ namespace Client
 
             }
 
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }
