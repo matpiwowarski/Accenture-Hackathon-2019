@@ -92,7 +92,6 @@ namespace Server
                 else
                 {
                     listOfClients[index].Unread--;
-                    var temp = "";
                     foreach (var elem in listOfClients[index].AllMessages)
                     {
                         if (!elem.isRead)

@@ -10,9 +10,19 @@
         <ResourceDictionary>
             <ImageSource x:Key="ah_shit_here_we_go_again.png">source/ah_shit_here_we_go_again.png
             </ImageSource>
+            <ImageSource x:Key="ale_dzban_dzbanometr.png">source/ale_dzban_dzbanometr.png
+            </ImageSource>
+            <ImageSource x:Key="all_right_then_keep_your_secrets_hobbit_frodo.png">source/all_right_then_keep_your_secrets_hobbit_frodo.png
+            </ImageSource>
             <ImageSource x:Key="braki_pustka_404_impossible_perhaps_the_archives_are_incomplete.png">source/braki_pustka_404_impossible_perhaps_the_archives_are_incomplete.png
             </ImageSource>
+            <ImageSource x:Key="change_my_mind_agrue.png">source/change_my_mind_agrue.png
+            </ImageSource>
             <ImageSource x:Key="cze, czesc, czolem, elo, graba, hej, hejka, serwus, siemanko, siemasz, sie masz, strzala, zdrowko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png">source/cze, czesc, czolem, elo, graba, hej, hejka, serwus, siemanko, siemasz, sie masz, strzala, zdrowko, eloszki, hejoszki, hejsia, siemka, witajcie_witam.png
+            </ImageSource>
+            <ImageSource x:Key="e_farquad.png">source/e_farquad.png
+            </ImageSource>
+            <ImageSource x:Key="excuse_me_what_the_fuck_wtf.png">source/excuse_me_what_the_fuck_wtf.png
             </ImageSource>
             <ImageSource x:Key="hackerman_haker_koder_programista_spec_technologia.png">source/hackerman_haker_koder_programista_spec_technologia.png
             </ImageSource>
@@ -20,11 +30,15 @@
             </ImageSource>
             <ImageSource x:Key="improve_adapt_overcome_samodoskonalenie_przetrwanie_improwizacja_adaptacja_pokonanie.png">source/improve_adapt_overcome_samodoskonalenie_przetrwanie_improwizacja_adaptacja_pokonanie.png
             </ImageSource>
+            <ImageSource x:Key="it_aint_much_but_its_honets_work.png">source/it_aint_much_but_its_honets_work.png
+            </ImageSource>
             <ImageSource x:Key="modern_problem_require_modern_solution_wspolczesne_problemy_rozwiazania.png">source/modern_problem_require_modern_solution_wspolczesne_problemy_rozwiazania.png
             </ImageSource>
             <ImageSource x:Key="no_i_dont_think_i_will_nie_sadze.png">source/no_i_dont_think_i_will_nie_sadze.png
             </ImageSource>
             <ImageSource x:Key="now_looks_like_a_job_for_me_robota_dla_mnie_praca.png">source/now_looks_like_a_job_for_me_robota_dla_mnie_praca.png
+            </ImageSource>
+            <ImageSource x:Key="o_suprised_pikachu_pokemon.png">source/o_suprised_pikachu_pokemon.png
             </ImageSource>
             <ImageSource x:Key="old_lady_reads_starzy_babcia_dziadek.png">source/old_lady_reads_starzy_babcia_dziadek.png
             </ImageSource>
