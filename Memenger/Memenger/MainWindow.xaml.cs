@@ -23,11 +23,43 @@ namespace Memenger
         public MainWindow()
         {
             Memecryptor memecryptor = Memecryptor.Instance;
-            string memeFolderPath = "../source";
-           // memecryptor.AddMemesFromFolder(memeFolderPath);
+            string memeFolderPath = "../../source/";
+            memecryptor.AddMemesFromFolder(memeFolderPath);
 
             InitializeComponent();
         }
+        private void Send_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(TextBox.Text.Length > 0 )
+            {
+                string sentText = TextBox.Text.ToString();
+                TextBox.Text = "";
 
+                Memecryptor memecryptor = Memecryptor.Instance;
+                memecryptor.Text = sentText;
+                memecryptor.FindStringInMemes(sentText);
+
+                if(memecryptor.MemesToDisplay.Count > 0)
+                {
+                    string resourceName = memecryptor.MemesToDisplay[0].FileName.ToString();
+                    
+                    UserImage1.Source = (ImageSource)FindResource(resourceName);
+                }
+                memecryptor.MemesToDisplay.Clear();
+            }
+        }
+
+        
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            
+        }
+
+        private void Send_Button_AccessKeyPressed(object sender, AccessKeyPressedEventArgs e)
+        {
+
+        }
     }
 }

@@ -44,12 +44,12 @@ namespace Memenger
             {
                 MemeList.Add(memes[i]);
             }
-            sortMemes();
+            SortMemes();
         }
 
         public void AddMemesFromFolder(string folderPath)
         {
-            DirectoryInfo d = new DirectoryInfo(folderPath);   //Assuming Test is your Folder
+            DirectoryInfo d = new DirectoryInfo(folderPath);    //Assuming Test is your Folder
             FileInfo[] Files = d.GetFiles("*.png");             //Getting .png files
 
             foreach (FileInfo file in Files)                    // Add every meme to Meme List
@@ -59,18 +59,18 @@ namespace Memenger
             }
         }
 
-        public void sortMemes()
+        public void SortMemes()
         {
             this.MemeList.Sort();
         }
 
-        public void findWordInMemes(string word)
+        public void FindStringInMemes(string word)
         {
-            foreach (Meme m in memeList)
+            for(int i = 0; i < memeList.Count; i++) 
             {
-                if (m.FileName == word)
+                if (memeList[i].FileName.Contains(word))
                 {
-                    MemeList.Add(m);
+                    MemesToDisplay.Add(MemeList[i]);
                 }
             }
         }
