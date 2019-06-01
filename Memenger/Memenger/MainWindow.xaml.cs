@@ -142,12 +142,14 @@ namespace Memenger
 
         private void ContactNameLabel_TextChanged(object sender, TextChangedEventArgs e)
         {
+            clearChat();
             Contact contact = Contact.Instance;
             contact.Name = ContactNameLabel.Text.ToString();
         }
 
         private void Username_Label_TextChanged(object sender, TextChangedEventArgs e)
         {
+            clearChat();
             User user = User.Instance;
             user.Name = Username_Label.Text.ToString();
         }
@@ -155,6 +157,23 @@ namespace Memenger
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        void clearChat()
+        {
+            if(ContactImage1 != null)
+                ContactImage1.Source = null;
+            if (ContactImage2 != null)
+                ContactImage2.Source = null;
+            if (ContactImage3 != null)
+                ContactImage3.Source = null;
+
+            if(UserImage1 != null)
+                UserImage1.Source = null;
+            if (UserImage2 != null)
+                UserImage2.Source = null;
+            if (UserImage3 != null)
+                UserImage3.Source = null;
         }
     }
 }
