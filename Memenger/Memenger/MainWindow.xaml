@@ -10,9 +10,15 @@
         <ResourceDictionary>
             <ImageSource x:Key="dopperganger.png">source/dopperganger.png
             </ImageSource>
-            <ImageSource x:Key="hello_there.png">../../source/hello_there.png
+            <ImageSource x:Key="hello_there.png">source/hello_there.png
             </ImageSource>
             <ImageSource x:Key="how_do_you_do_fellow_kids.png">source/how_do_you_do_fellow_kids.png
+            </ImageSource>
+            <ImageSource x:Key="impossible_perhaps_the_archives_are_incomplete.png">source/impossible_perhaps_the_archives_are_incomplete.png
+            </ImageSource>
+            <ImageSource x:Key="improve_adapt_overcome.png">source/improve_adapt_overcome.png
+            </ImageSource>
+            <ImageSource x:Key="is_it_possible_to_learn_this_power.png">source/is_it_possible_to_learn_this_power.png
             </ImageSource>
         </ResourceDictionary>
     </Window.Resources>

@@ -110,7 +110,6 @@
     <Resource Include="source\one_does_not_simply.png" />
     <Resource Include="source\outstanding_move.png" />
     <Resource Include="source\roll_safe.png" />
-    <Resource Include="source\the_future_is_now_old_man.jpg" />
     <Resource Include="source\well_of_course_i_know_him_hes_me.png" />
     <Resource Include="source\well_yes_but_actually_no.png" />
     <Resource Include="source\worldwide.png" />
@@ -120,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="source\icons\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\impossible_perhaps_the_archives_are_incomplete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
