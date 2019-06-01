@@ -91,8 +91,8 @@ namespace Memenger
 
         void update(object sender, EventArgs e)
         {
-            //string fileName = proxy.GetMessage(Username_Label.Text);
-            string fileName = "";
+            string fileName = proxy.GetMessage(Username_Label.Text.ToString());
+            //string fileName = "";
             if (fileName != "")
             {
                 if (UserImage1.Source == null && ContactImage1.Source == null)
