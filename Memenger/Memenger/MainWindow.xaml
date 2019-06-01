@@ -20,6 +20,32 @@
             </ImageSource>
             <ImageSource x:Key="is_it_possible_to_learn_this_power.png">source/is_it_possible_to_learn_this_power.png
             </ImageSource>
+            <ImageSource x:Key="modern_problem_require_modern_solution.png">source/modern_problem_require_modern_solution.png
+            </ImageSource>
+            <ImageSource x:Key="no_i_dont_think_i_will.png">source/no_i_dont_think_i_will.png
+            </ImageSource>
+            <ImageSource x:Key="now_looks_like_a_job_for_me.png">source/now_looks_like_a_job_for_me.png
+            </ImageSource>
+            <ImageSource x:Key="old_lady_reads.png">source/old_lady_reads.png
+            </ImageSource>
+            <ImageSource x:Key="outstanding_move.png">source/outstanding_move.png
+            </ImageSource>
+            <ImageSource x:Key="roll_safe.png">source/roll_safe.png
+            </ImageSource>
+            <ImageSource x:Key="the_future_is_now_old_man.png">source/the_future_is_now_old_man.png
+            </ImageSource>
+            <ImageSource x:Key="well_of_course_i_know_him_hes_me.png">source/well_of_course_i_know_him_hes_me.png
+            </ImageSource>
+            <ImageSource x:Key="well_yes_but_actually_no.png">source/well_yes_but_actually_no.png
+            </ImageSource>
+            <ImageSource x:Key="worldwide.png">source/worldwide.png
+            </ImageSource>
+            <ImageSource x:Key="you_are_already_dead.png">source/you_are_already_dead.png
+            </ImageSource>
+            <ImageSource x:Key="you_have_become_the_very_thing_you_swore_to_destroy.png">source/you_have_become_the_very_thing_you_swore_to_destroy.png
+            </ImageSource>
+            <ImageSource x:Key="yuo_are_tearing_me_apart.png">source/yuo_are_tearing_me_apart.png
+            </ImageSource>
         </ResourceDictionary>
     </Window.Resources>
 
