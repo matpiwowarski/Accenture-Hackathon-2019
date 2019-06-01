@@ -98,35 +98,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="source\dopperganger.jpg" />
-    <Resource Include="source\hackerman.png" />
-    <Resource Include="source\hello_there.jpg" />
-    <Resource Include="source\how_do_you_do_fellow_kids.jpg" />
-    <Resource Include="source\improve_adapt_overcome.jpg" />
-    <Resource Include="source\is_it_possible_to_learn_this_power.jpg" />
-    <Resource Include="source\i_have_been_looking_forward_to_this.png" />
-    <Resource Include="source\modern_problem_require_modern_solution.jpg" />
-    <Resource Include="source\now_looks_like_a_job_for_me.jpg" />
-    <Resource Include="source\no_i_dont_think_i_will.jpg" />
-    <Resource Include="source\old_lady_reads.jpg" />
-    <Resource Include="source\one_does_not_simply.jpg" />
-    <Resource Include="source\outstanding-move_o_7264235.jpg" />
-    <Resource Include="source\outstanding_move.jpg" />
-    <Resource Include="source\roll_safe.jpeg" />
-    <Resource Include="source\shut_up_and_take_my_money.jpg" />
-    <Resource Include="source\that_is_why_i_am_here.jpg" />
-    <Resource Include="source\the_laws_of_time_are_mine.jpg" />
-    <Resource Include="source\this_is_beyond_science.jpg" />
-    <Resource Include="source\this_is_where_the_fun_begins.jpg" />
-    <Resource Include="source\three_take_it_or_leave.jpg" />
-    <Resource Include="source\wait_that%27s_illegal.jpg" />
-    <Resource Include="source\well_of_course_i_know_him_hes_me.jpg" />
-    <Resource Include="source\well_yes_but_actually_no.jpg" />
-    <Resource Include="source\worldwide.jpg" />
-    <Resource Include="source\you_are_already_dead.jpg" />
-    <Resource Include="source\you_gotta_pump_those_rookie_numbers.png" />
-    <Resource Include="source\you_have_become_the_very_thing_you_swore_to_destroy.jpg" />
-    <Resource Include="source\yuo_are_tearing_me_apart.jpg" />
+    <Resource Include="source\dopperganger.png" />
+    <Resource Include="source\hello_there.png" />
+    <Resource Include="source\how_do_you_do_fellow_kids.png" />
+    <Resource Include="source\improve_adapt_overcome.png" />
+    <Resource Include="source\is_it_possible_to_learn_this_power.png" />
+    <Resource Include="source\modern_problem_require_modern_solution.png" />
+    <Resource Include="source\now_looks_like_a_job_for_me.png" />
+    <Resource Include="source\no_i_dont_think_i_will.png" />
+    <Resource Include="source\old_lady_reads.png" />
+    <Resource Include="source\one_does_not_simply.png" />
+    <Resource Include="source\outstanding-move_o_7264235.png" />
+    <Resource Include="source\outstanding_move.png" />
+    <Resource Include="source\roll_safe.png" />
+    <Resource Include="source\the_future_is_now_old_man.jpg" />
+    <Resource Include="source\well_of_course_i_know_him_hes_me.png" />
+    <Resource Include="source\well_yes_but_actually_no.png" />
+    <Resource Include="source\worldwide.png" />
+    <Resource Include="source\you_are_already_dead.png" />
+    <Resource Include="source\you_have_become_the_very_thing_you_swore_to_destroy.png" />
+    <Resource Include="source\yuo_are_tearing_me_apart.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="source\icons\logo.png" />
