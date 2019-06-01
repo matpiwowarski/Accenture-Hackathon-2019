@@ -36,16 +36,10 @@ namespace Memenger
                 TextBox.Text = "";
 
                 Memecryptor memecryptor = Memecryptor.Instance;
-                memecryptor.Text = sentText;
-                memecryptor.FindStringInMemes(sentText);
 
-                if(memecryptor.MemesToDisplay.Count > 0)
-                {
-                    string resourceName = memecryptor.MemesToDisplay[0].FileName.ToString();
+                string resourceName = memecryptor.PutWordGetMeme(sentText);
                     
-                    UserImage1.Source = (ImageSource)FindResource(resourceName);
-                }
-                memecryptor.MemesToDisplay.Clear();
+                UserImage1.Source = (ImageSource)FindResource(resourceName);
             }
         }
 

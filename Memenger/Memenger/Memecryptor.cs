@@ -10,12 +10,10 @@ namespace Memenger
     // Singleton Pattern 
     class Memecryptor
     {
-        private string text; // web page data
         private List<Meme> memeList = new List<Meme>(); // memes with file names
         private List<Meme> memesToDisplay = new List<Meme>(); // memes with file names
         private static readonly Memecryptor instance = new Memecryptor();
 
-        public string Text { get => text; set => text = value; }
         public List<Meme> MemeList { get => memeList; set => memeList = value; }
         public List<Meme> MemesToDisplay { get => memesToDisplay; set => memesToDisplay = value; }
 
