@@ -84,7 +84,7 @@ namespace Memenger
             }
             else
             {
-                return "impossible_perhaps_the_archives_are_incomplete.png";
+                return "z.png";
             }
         }
     }
