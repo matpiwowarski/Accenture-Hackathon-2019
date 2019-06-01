@@ -63,22 +63,22 @@
             <Button x:Name="Send_Button" HorizontalAlignment="Center" Margin="0,550,0,0" VerticalAlignment="Center" Width="64" Height="64" Click="Send_Button_Click" IsDefault="True">
                 <Image x:Name="Logo_Image" Source="source/icons/logo.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
-            <Border x:Name="UserImage1Border" BorderThickness="1" HorizontalAlignment="Left" Height="170" Margin="40,80,0,0" VerticalAlignment="Top" Width="250" BorderBrush="#E5000000">
+            <Border x:Name="UserImage1Border" HorizontalAlignment="Left" Height="180" Margin="40,80,0,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="UserImage1"/>
             </Border>
-            <Border x:Name="UserImage2Border" BorderThickness="1" HorizontalAlignment="Left" Height="170" Margin="40,270,0,0" VerticalAlignment="Top" Width="250" BorderBrush="#E5000000">
+            <Border x:Name="UserImage2Border" HorizontalAlignment="Left" Height="180" Margin="40,270,0,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="UserImage2"/>
             </Border>
-            <Border x:Name="UserImage3Border" BorderThickness="1" HorizontalAlignment="Left" Height="170" Margin="40,460,0,0" VerticalAlignment="Top" Width="250" BorderBrush="#E5000000">
+            <Border x:Name="UserImage3Border" HorizontalAlignment="Left" Height="180" Margin="40,460,0,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="UserImage3"/>
             </Border>
-            <Border x:Name="ContactImage1Border" BorderThickness="1" HorizontalAlignment="Right" Height="170" Margin="0,80,40,0" VerticalAlignment="Top" Width="250" BorderBrush="#E5000000">
+            <Border x:Name="ContactImage1Border" HorizontalAlignment="Right" Height="180" Margin="0,80,40,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="ContactImage1"/>
             </Border>
-            <Border x:Name="ContactImage2Border" BorderThickness="1" HorizontalAlignment="Right" Height="170" Margin="0,270,40,0" VerticalAlignment="Top" Width="250" BorderBrush="#E5000000">
+            <Border x:Name="ContactImage2Border" HorizontalAlignment="Right" Height="180" Margin="0,270,40,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="ContactImage2"/>
             </Border>
-            <Border x:Name="ContactImage3Border" BorderThickness="1" HorizontalAlignment="Right" Height="170" Margin="0,460,40,0" VerticalAlignment="Top" Width="250" BorderBrush="#E5000000">
+            <Border x:Name="ContactImage3Border" HorizontalAlignment="Right" Height="180" Margin="0,460,40,0" VerticalAlignment="Top" Width="350" BorderBrush="#E5000000">
                 <Image x:Name="ContactImage3"/>
             </Border>
 

@@ -42,24 +42,18 @@ namespace Memenger
             {
                 MemeList.Add(memes[i]);
             }
-            SortMemes();
         }
 
         public void AddMemesFromFolder(string folderPath)
         {
-            DirectoryInfo d = new DirectoryInfo(folderPath);    //Assuming Test is your Folder
-            FileInfo[] Files = d.GetFiles("*.png");             //Getting .png files
+            DirectoryInfo d = new DirectoryInfo(folderPath);    // ssAssuming Test is your Folder
+            FileInfo[] Files = d.GetFiles("*.png");             // Getting .png files
 
             foreach (FileInfo file in Files)                    // Add every meme to Meme List
             {
                 Meme meme = new Meme(file.Name);
                 AddMeme(meme);
             }
-        }
-
-        public void SortMemes()
-        {
-            this.MemeList.Sort();
         }
 
         public void FindStringInMemes(string word)
