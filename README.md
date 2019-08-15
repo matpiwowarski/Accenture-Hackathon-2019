@@ -1,4 +1,4 @@
-### Accenture-Hackathon-2019
+### Accenture-Hackathon-2019 - TOPIC: Communicator of the future/Fight against fake news
 # Our idea: Memenger - Communicator of the future
 
 ### Screenshots:
